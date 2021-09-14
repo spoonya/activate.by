@@ -1,0 +1,25 @@
+.footer {
+  background-color: $color-primary-alpha;
+
+  padding: 2.4rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__info {
+  p {
+    font-size: 12px;
+    line-height: 1.33;
+    color: $color-primary-omega;
+    letter-spacing: 0.6px;
+  }
+}
+
+.footer__icon {
+  width: 462px;
+  height: 40px;
+}

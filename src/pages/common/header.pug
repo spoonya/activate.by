@@ -1,0 +1,21 @@
+header.header
+  .container
+    .header__inner
+      .header__group
+        img.header__logo(src="images/common/logo.png", alt="activate.by")
+        form.header__search(name="search", method="POST", action="#")
+          input.header__search-input(name="search-input", type="text", placeholder="Поиск", required)
+          +icon('header__search-icon', 'search')
+      .header__group
+        nav.header__menu
+          ul
+            li
+              a(href="#") Каталог
+            li
+              a(href="#") О нас
+            li
+              a(href="#") FAQ
+            li
+              a(href="#") Контакты
+        button.header__cart(aria-label="Корзина")
+          +icon('header__cart-icon', 'cart')

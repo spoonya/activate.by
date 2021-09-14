@@ -1,0 +1,32 @@
+.intro {
+  margin-bottom: 8rem;
+}
+
+.intro__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro__info {
+  max-width: 53rem;
+  width: 100%;
+}
+
+.intro__title {
+  font-size: 5rem;
+  line-height: 1.4;
+
+  margin-bottom: 2rem;
+}
+
+.intro__txt {
+  line-height: 1.75;
+  color: $color-primary-gamma;
+
+  margin-bottom: 6rem;
+}
+
+.intro__img {
+  max-width: 73rem;
+}

@@ -1,0 +1,24 @@
+mixin icon(className, name)
+  svg(class= className): use(xlink:href="images/sprite.svg#" + name)
+
+mixin linkButton(link, txt, isModif=false)
+  if isModif
+    - var modif = 'link-button--light'
+  else
+    - var modif = null
+
+  a.link-button(href= link class= modif)= txt
+
+mixin sectionContacts
+  section.contacts
+    .container
+      h2.contacts__title Наши контакты
+      ul.contacts__list
+        li.contacts__item
+          a.contacts__item-link(href="mailto:ptseraev@gmail.com") ptseraev@gmail.com
+        li.contacts__item
+          a.contacts__item-link(href="tel:+375296816200") +375 29 681 62 00
+        li.contacts__item
+          a.contacts__item-link(href="tel:+375447224231") +375 44 722 42 31
+        li.contacts__item
+          a.contacts__item-link(href="https://yandex.ru/maps/?um=constructor%3A5f20e6203c6128edc99146fcd6dec8429ec326c3a57851abc291a83163331df5&source=constructorLink" target="_blank") Беларусь, Минская область, Жодино, Советская улица, 22А
