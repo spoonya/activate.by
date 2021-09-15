@@ -1,0 +1,8 @@
+mixin commentsItem(img, name, datetime, txt)
+  li.product-comments__item
+    img.product-comments__item-img(src=`images/comments/${img}`, alt="")
+    .product-comments__content
+      .product-comments__info
+        p.product-comments__info-name= name
+        p.product-comments__info-datetime= datetime
+      p.product-comments__item-txt= txt

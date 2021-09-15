@@ -1,0 +1,41 @@
+.product-section-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.product-txt {
+  font-size: 2rem;
+  line-height: 32px;
+
+  p {
+    &:not(:last-of-type) {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__list {
+    li:before {
+      content: '-';
+      margin-right: 5px;
+    }
+  }
+}
+
+.product-manual {
+  padding-left: 22px;
+
+  li {
+    list-style-type: decimal;
+  }
+
+  &__download {
+    color: $color-primary-beta;
+    margin: 0 8px;
+
+    border-bottom: 1px solid;
+
+    &--marginless {
+      margin: 0;
+    }
+  }
+}

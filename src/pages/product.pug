@@ -1,0 +1,150 @@
+extends common/layout
+
+include includes/product/mixins
+
+block content
+  main
+    +crumbs([
+      {href: 'catalog.html', name: 'Каталог'},
+      {href: '#', name: 'ПДД'},
+      {href: '#', name: 'Тесты по билетам ПДД 2021 от А-Драйв'}
+    ])
+
+    //Product
+    section.product
+      .container
+        .product__inner
+          img.product__img(src="images/products/pdd/pdd-1.png", alt="")
+          .product__info
+            h1.product__title Тесты по билетам ПДД 2021 от А-Драйв
+            p.product__descrip Более 2500 вопросов по ПДД и другим предметам, изучаемым в автошколе. Согласовано с Управлением ГАИ МВД РБ.
+            ul.product__info-list
+              li.product__info-item
+                p.product__info-item-title Производитель
+                .product__info-item-decorator
+                p.product__info-item-value Microsoft Corporation
+              li.product__info-item
+                p.product__info-item-title Операционная система
+                .product__info-item-decorator
+                p.product__info-item-value Windows XP / Vista / 7 / 8.1 / 10
+              li.product__info-item
+                p.product__info-item-title Язык
+                .product__info-item-decorator
+                p.product__info-item-value Русский
+              li.product__info-item
+                p.product__info-item-title Оперативная память
+                .product__info-item-decorator
+                p.product__info-item-value 512 МБ
+              li.product__info-item
+                p.product__info-item-title Лицензия
+                .product__info-item-decorator
+                p.product__info-item-value Только РБ
+            .product__controls
+              ul.product__versions
+                li.product__versions-item
+                  button.product__versions-button.product__versions-button--active 1 ПК
+                li.product__versions-item
+                  button.product__versions-button 2 ПК
+                li.product__versions-item
+                  button.product__versions-button 3 ПК
+              .product__counter
+                .product__counter-group
+                  button.product__counter-control -
+                  p.product__counter-count 1
+                  button.product__counter-control +
+                p.product__counter-price 53.55 BYN
+              .product__controls-buy
+                button.product__controls-buy-button Купить
+                ul.product__versions.product__versions--small
+                  li.product__versions-item
+                    button.product__versions-button.product__versions-button--active  1 ПК
+                  li.product__versions-item
+                    button.product__versions-button 2 ПК
+                  li.product__versions-item
+                    button.product__versions-button 3 ПК
+
+    //Product key
+    section.product-key
+      .container
+        h2.product-section-title Данные о ключе
+        .product-txt
+          p Онлайн-сервис по изучению ПДД «ADrive ПДД-Smart» — это онлайн платформа, позволяющая учащимися организовать самостоятельное изучение предметов с любого подключённого к интернету устройства, в любое удобное время, в любом удобном месте, а преподавателю контролировать процесс обучения в режиме реального времени и получать достоверную информацию о действительных знаниях материала учащимися.
+          p Используя «ADrive ПДД-Smart», вы получите:
+          ul.product-txt__list
+            li всю базу вопросов ADrive;
+            li занимайтесь с любого устройства — мобильного телефона, компьютера или планшета;
+            li полноценно тренируйте зачёты, внутренний экзамен автошколы и экзамен в ГАИ;
+            li самостоятельно выбирайте метод или форму обучения (лекции, тесты, «марафон»);
+
+    //Product faq
+    section.faq
+      .container
+        .faq__inner
+          .faq__content
+            h2.product-section-title Популярные вопросы
+            +accordion([
+              {
+                question: 'Не запускается программа. Что делать?',
+                answer: ['Да, предоставляем. Гарантийный срок составляет 12 месяцев.']
+              },
+              {
+                question: 'После оплаты не приходит ключ активации',
+                answer: ['Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, eum fugit obcaecati ipsum recusandae error neque maxime modi velit, inventore unde magnam magni eligendi eaque necessitatibus accusamus alias aperiam dignissimos.']
+              },
+              {
+                question: 'Как обновить программу, если давно её не запускал',
+                answer: ['Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, eum fugit obcaecati ipsum recusandae error neque maxime modi velit, inventore unde magnam magni eligendi eaque necessitatibus accusamus alias aperiam dignissimos.']
+              },
+            ])
+          +faqDescrip
+
+    //Product setup
+    section.product-setup
+      .container
+        h2.product-section-title Как установить и запустить
+        .product-txt
+          ol.product-manual
+            li
+              |Скачать полную версию —
+              a.product-manual__download(href="#" download) скачать
+              |(около 330Мб)
+            li Установить
+            li Запустить и активировать
+
+    //Product install
+    section.product-install
+      .container
+        h2.product-section-title Как установить и запустить
+        .product-txt
+          ol.product-manual
+            li Скачайте и установите на свой компьютер демонстрационную версию программы. Убедившись в её работоспособности — установите её полную версию.
+            li
+              |Скачайте полную версии программы «ADrive ПДД-Тесты 2020» (
+              a.product-manual__download.product-manual__download--marginless(href="#" download) скачать
+              |) и установите её на свой компьютер.
+            li Для запуска полной версии необходимо приобрести серийный номер программы
+
+    //Product recommend
+    section.product-recommend
+      .container
+        h2.product-section-title Это вас может заинтересовать
+        #swiper-recommend.swiper-container
+          .swiper-wrapper
+            +productCard('#', 'kaspersky/kaspersky-1.png', '13.5 BYN', 'Kaspersky Total Security', 'product-card--small-txt swiper-slide')
+            +productCard('#', 'outlook/outlook-1.png', '80.5 BYN', 'Microsoft Outlook 2016', 'product-card--small-txt swiper-slide')
+            +productCard('#', 'office/office-1.png', '13.5 BYN', 'Office 2019 Professional Plus', 'product-card--small-txt swiper-slide')
+            +productCard('#', 'windows/windows7.png', '133.5 BYN', 'Windows 7 Enterprise (Корпоративная)', 'product-card--small-txt swiper-slide')
+
+    //Comments
+    section.product-comments
+      .container
+        h2.product-section-title
+          |Отзывы и комментарии:&nbsp;
+          span 2
+        p.product-comments__descrip Отзывы отправляют  покупатели совершившими покупку в ответ на код активации
+        ul.product-comments__list
+          +commentsItem('comments-1.png', 'Иван Дулин', '13.03.2021 9:11:09', 'Спасибо, все отлично работает.')
+          +commentsItem('comments-1.png', 'Иван Дулин', '13.03.2021 9:11:09', 'Приобретал ключ для Windows 10 Home. Хорошая цена. Доставка - почти сразу после оплаты, сообщением на телефон. Активировалось без проблем. Спасибо!')
+
+    //Contacts
+    +sectionContacts

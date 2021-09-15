@@ -11,7 +11,7 @@ block content
           .intro__info
             h1.intro__title Лицензированные ключи активации
             p.intro__txt На сегодняшний день мы рады предложить вам более восьми тысяч лицензионных программ от ведущих зарубежных разработчиков, отечественных компаний и индивидуальных авторов
-            +linkButton('#', 'Смотреть каталог')
+            +linkButton('catalog.html', 'Смотреть каталог')
           img.intro__img(src="images/intro/intro.png", alt="")
 
   //Products
@@ -29,12 +29,12 @@ block content
       ])
       .products__inner
         .products__items
-          +productItem('#', 'product-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
-          +productItem('#', 'product-2.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
-          +productItem('#', 'product-3.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
-          +productItem('#', 'product-4.png', 'Dr.Web Security Space ', null, '26.60 BYN')
-          +productItem('#', 'product-5.png', 'CorelDRAW Graphics', null, '482.30 BYN')
-        +linkButton('#', 'Смотреть больше', true)
+          +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
+          +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+          +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+          +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
+          +productItem('product.html', 'coreldraw/coreldraw-1.png', 'CorelDRAW Graphics', null, '482.30 BYN')
+        +linkButton('catalog.html', 'Смотреть больше', true)
 
   //Bonds
   section.bonds

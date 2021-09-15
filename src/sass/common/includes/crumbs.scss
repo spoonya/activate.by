@@ -1,0 +1,44 @@
+.crumbs {
+  margin: 4rem 0 3rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    a {
+      color: $color-primary-beta;
+      font-size: 1.8rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:not(:last-of-type) {
+      &::after {
+        display: inline-block;
+        content: '';
+
+        margin: 0 7px 4px;
+
+        height: 4px;
+        width: 4px;
+
+        background-color: $color-primary-beta;
+
+        border-radius: 50%;
+
+        vertical-align: middle;
+      }
+    }
+
+    &:last-of-type {
+      a {
+        color: $color-secondary-alpha;
+      }
+    }
+  }
+}

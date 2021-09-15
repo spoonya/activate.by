@@ -1,0 +1,12 @@
+@mixin hover-control-button {
+  $duration: 0.1s;
+
+  transition: background-color $duration linear, color $duration linear,
+    border-color $duration linear;
+
+  &:hover {
+    color: $color-primary-psi;
+    background-color: $color-primary-beta;
+    border-color: $color-primary-beta;
+  }
+}

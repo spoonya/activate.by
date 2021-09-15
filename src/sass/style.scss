@@ -3,6 +3,8 @@
 @import 'mixins/media';
 @import 'mixins/outline';
 @import 'mixins/title-section';
+@import 'mixins/hover-control-button';
+@import 'mixins/hover-product-card';
 
 @import 'common/global';
 @import 'common/link-button';
@@ -10,17 +12,26 @@
 @import 'common/footer';
 @import 'common/burger';
 @import 'common/filters';
+@import 'common/faq';
+@import 'common/includes/crumbs';
 @import 'common/includes/accordion';
+@import 'common/includes/contacts';
+@import 'common/includes/product-card';
 
 @import 'index/intro';
 @import 'index/products';
 @import 'index/bonds';
 @import 'index/reviews';
 @import 'index/process';
-@import 'index/contacts';
+
+@import 'product/product';
+@import 'product/common';
+@import 'product/product-faq';
+@import 'product/product-setup';
+@import 'product/product-install';
+@import 'product/product-recommend';
+@import 'product/product-comments';
 
 @import 'about/about';
-
-@import 'faq/faq';
 
 @import 'page-404/404';

@@ -40,3 +40,26 @@ mixin accordion(faqArr)
         .accordion__txt
           for txt in item.answer
             p= txt
+
+mixin crumbs(arrLinks)
+  .crumbs
+    .container
+      nav.crumbs__inner
+        ul
+          for link in arrLinks
+            li: a(href= link.href)= link.name
+
+mixin faqDescrip
+  .faq__descrip
+    h2.faq__descrip-title Не нашли ответ?
+    p.faq__descrip
+      |Проверьте раздел
+      a.faq__descrip-link(href="#") FAQ
+      |или напишите нам на почту. Мы обязательно вам поможем.
+
+mixin productCard(link, img, price, title, modif=null)
+  article.product-card(class= modif)
+    a.product-card__link(href= link)
+    img.product-card__img(src=`images/products/${img}`, alt="")
+    p.product-card__price= price
+    h3.product-card__title= title
