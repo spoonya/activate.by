@@ -2,7 +2,8 @@ header.header
   .container
     .header__inner
       .header__group
-        img.header__logo(src="images/common/logo.png", alt="activate.by")
+        a.header__logo-link(href="index.html" aria-label="Главная")
+          img.header__logo(src="images/common/logo.png", alt="activate.by")
         form.header__search(name="search", method="POST", action="#")
           input.header__search-input(name="search-input", type="text", placeholder="Поиск", required)
           +icon('header__search-icon', 'search')
@@ -10,11 +11,11 @@ header.header
         nav.header__menu
           ul
             li
-              a(href="#") Каталог
+              a(href="catalog.html") Каталог
             li
-              a(href="#") О нас
+              a(href="about.html") О нас
             li
-              a(href="#") FAQ
+              a(href="faq.html") FAQ
             li
               a(href="#") Контакты
         button.header__cart(aria-label="Корзина")

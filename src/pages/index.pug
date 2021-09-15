@@ -18,15 +18,15 @@ block content
   section.products
     .container
       h2.products__title Наша продукция
-      ul.products__filters
-        li.products__filters-item: button.products__filters-button.products__filters-button--active Все
-        li.products__filters-item: button.products__filters-button Антивирусы
-        li.products__filters-item: button.products__filters-button Офисные программы
-        li.products__filters-item: button.products__filters-button ОС
-        li.products__filters-item: button.products__filters-button Работа с текстом
-        li.products__filters-item: button.products__filters-button Работа с файлами
-        li.products__filters-item: button.products__filters-button Графика и дизайн
-        li.products__filters-item: button.products__filters-button Образование и наука
+      +filters([
+        'Антивирусы',
+        'Офисные программы',
+        'ОС',
+        'Работа с текстом',
+        'Работа с файлами',
+        'Графика и дизайн',
+        'Образование и наука'
+      ])
       .products__inner
         .products__items
           +productItem('#', 'product-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)

@@ -1,0 +1,41 @@
+.faq {
+  margin-top: 10rem;
+}
+
+.faq__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__content {
+  margin-bottom: 10rem;
+
+  max-width: 86rem;
+
+  width: 100%;
+}
+
+.faq__content-title {
+  @include title-section;
+
+  font-size: 3rem;
+}
+
+.faq__descrip-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.faq__descrip {
+  font-size: 2rem;
+  line-height: 1.6;
+
+  max-width: 31rem;
+
+  &-link {
+    margin: 0 5px;
+
+    color: $color-primary-beta;
+    border-bottom: 1px solid;
+  }
+}

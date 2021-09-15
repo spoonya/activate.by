@@ -1,0 +1,5 @@
+mixin aboutItem(icon, title, number, modif)
+  li.about__item
+    +icon('about__item-icon', icon)
+    h3.about__item-title= title
+    p.about__item-number(class= modif)= number

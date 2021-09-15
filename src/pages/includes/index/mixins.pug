@@ -12,7 +12,7 @@ mixin productItem(link, img, title, priceSale, priceUsual, isNew=false)
     - modif = null
 
   article.products__item(class= modif)
-    a.products__item-link(href= link)
+    a.products__item-link(href= link aria-label= title)
     p.products__item-mark= markTitle
     img.products__item-img(src=`images/products/${img}`, alt="")
     .products__item-info

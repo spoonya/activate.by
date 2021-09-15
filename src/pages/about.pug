@@ -1,0 +1,26 @@
+extends common/layout
+
+include includes/about/mixins
+
+block content
+  main
+    //About
+    section.about
+      .container
+        .about__inner
+          .about__info
+            h2.about__info-title О нас
+            .about__txt
+              p Наш магазин с 2019 года осуществляет продажу оригинальных кодов и ключей активации - для операционных систем, офисных продуктов, антивирусных программ, и других товаров.
+              p Магазин популярен своими низкими ценами и всевозможными скидками на товары, которые непременно Вас обрадуют и сохранят часть Вашего бюджета. Мы являемся официальным партнером сервиса Oplata.Info (Digiseller.ru).
+              p Также мы сотрудничаем с официальными партнерами Microsoft и представителями различных антивирусных компаний.
+            img.about__img(src="images/about/about.png", alt="")
+          .about__features
+            h2.about__features-title О нас в цифрах
+            ul.about__list
+              +aboutItem('cart', 'Проданно в розницу', '1 289', 'about__item-number--sale')
+              +aboutItem('smile', 'Положительных отзывов', '356', 'about__item-number--positive')
+              +aboutItem('sad', 'Отрицательных отзывов', '0', 'about__item-number--negative')
+
+    //Contacts
+    +sectionContacts
