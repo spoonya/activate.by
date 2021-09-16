@@ -21,7 +21,7 @@ mixin sectionContacts
         li.contacts__item
           a.contacts__item-link(href="tel:+375447224231") +375 44 722 42 31
         li.contacts__item
-          a.contacts__item-link(href="https://yandex.ru/maps/?um=constructor%3A5f20e6203c6128edc99146fcd6dec8429ec326c3a57851abc291a83163331df5&source=constructorLink" target="_blank") Беларусь, Минская область, Жодино, Советская улица, 22А
+          a.contacts__item-link(href="https://yandex.ru/maps/?um=constructor%3A5f20e6203c6128edc99146fcd6dec8429ec326c3a57851abc291a83163331df5&source=constructorLink" rel="noopener" target="_blank") Беларусь, Минская область, Жодино, Советская улица, 22А
 
 mixin filters(filterArr)
   ul#filter.filters
@@ -60,6 +60,6 @@ mixin faqDescrip
 mixin productCard(link, img, price, title, modif=null)
   article.product-card(class= modif)
     a.product-card__link(href= link)
-    img.product-card__img(src=`images/products/${img}`, alt="")
+    img.product-card__img(src=`images/products/${img}`, width="200", height="200", alt="")
     p.product-card__price= price
     h3.product-card__title= title
