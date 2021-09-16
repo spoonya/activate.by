@@ -42,21 +42,16 @@ block content
             .product__controls
               ul.product__versions
                 li.product__versions-item
-                  button.product__versions-button.active 1 ПК
+                  input#version-1(type="radio" name="version" value="1" checked)
+                  label(for="version-1") 1 ПК
                 li.product__versions-item
-                  button.product__versions-button 2 ПК
+                  input#version-2(type="radio" name="version" value="2")
+                  label(for="version-2") 2 ПК
                 li.product__versions-item
-                  button.product__versions-button 3 ПК
+                  input#version-3(type="radio" name="version" value="3")
+                  label(for="version-3") 3 ПК
               +productCounter
-              .product__controls-buy
-                button.product__controls-buy-button Купить
-                ul.product__versions.product__versions--small
-                  li.product__versions-item
-                    button.product__versions-button.active  1 ПК
-                  li.product__versions-item
-                    button.product__versions-button 2 ПК
-                  li.product__versions-item
-                    button.product__versions-button 3 ПК
+              button.product__controls-buy-button Купить
 
     //Product key
     section.product-key
