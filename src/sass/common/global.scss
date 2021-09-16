@@ -86,7 +86,7 @@ textarea {
 input {
   font: inherit;
 
-  color: inherit;
+  color: $color-secondary-alpha;
 
   border: none;
   background: none;
@@ -209,8 +209,7 @@ body {
 
   opacity: 0;
   transition: 200ms ease-in-out;
-  background: rgba(40, 39, 40, 0.6);
-  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.5);
 
   pointer-events: none;
 

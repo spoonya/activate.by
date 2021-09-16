@@ -4,7 +4,7 @@ header.header
       .header__group
         a.header__logo-link(href="index.html" aria-label="Главная")
           img.header__logo(src="images/common/logo.png", alt="activate.by")
-        form.header__search(name="search", method="POST", action="#")
+        form.header__search(name="search", method="GET", action="#")
           input.header__search-input(name="search-input", type="text", placeholder="Поиск", required)
           +icon('header__search-icon', 'search')
       .header__group
@@ -18,5 +18,5 @@ header.header
               a(href="faq.html") FAQ
             li
               a(href="#") Контакты
-        button.header__cart(aria-label="Корзина")
+        button#cart-button.header__cart(aria-label="Корзина" data-modal-target="cart")
           +icon('header__cart-icon', 'cart')

@@ -1,13 +1,17 @@
 const CLASSES = {
   active: 'active',
-  hidden: 'hidden'
+  hidden: 'hidden',
+  scrollHidden: 'scroll-hidden',
+  modal: 'modal'
 };
 
 const DOM = {
-  filter: document.querySelector('#filter'),
-  details: [...document.querySelectorAll('#accordion > details')],
+  body: document.querySelector('body'),
   catalogFilters: document.querySelectorAll('.catalog__filters-checkbox'),
-  filtersResetCount: document.querySelector('#filters-reset-count')
+  details: [...document.querySelectorAll('#accordion > details')],
+  filter: document.querySelector('#filter'),
+  filtersResetCount: document.querySelector('#filters-reset-count'),
+  overlay: document.querySelector('#overlay')
 };
 
 export { CLASSES, DOM };

@@ -1,0 +1,37 @@
+.product-counter {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 7.6rem;
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    margin-right: 4.2rem;
+  }
+
+  &__control,
+  &__count {
+    font-size: 2rem;
+    color: $color-tertiary-psi;
+  }
+
+  &__control {
+    @include hover-control-button;
+
+    border: 1px solid $color-tertiary-psi;
+    border-radius: 50px;
+
+    min-height: 45px;
+    min-width: 45px;
+  }
+
+  &__count {
+    margin: 0 2rem;
+  }
+
+  &__price {
+    font-size: 3rem;
+  }
+}
