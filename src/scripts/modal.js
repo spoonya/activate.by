@@ -13,6 +13,7 @@ function closeModal(modal) {
 
   modal.classList.remove(CLASSES.active);
   DOM.overlay.classList.remove(CLASSES.active);
+  DOM.body.classList.remove(CLASSES.scrollHidden);
 }
 
 function controlModal() {
@@ -30,6 +31,7 @@ function controlModal() {
     const modals = document.querySelectorAll(
       `.${CLASSES.modal}.${CLASSES.active}`
     );
+
     modals.forEach((modal) => {
       closeModal(modal);
     });

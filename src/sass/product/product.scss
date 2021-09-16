@@ -11,6 +11,9 @@
 .product__img {
   object-fit: contain;
 
+  max-width: 60rem;
+  max-height: 60rem;
+
   padding: 5rem 11rem;
   margin-right: 4rem;
 
@@ -70,7 +73,7 @@
 .product__versions {
   display: flex;
 
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 
   label {
     @include hover-control-button;
