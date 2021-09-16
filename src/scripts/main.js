@@ -1,3 +1,6 @@
+import 'core-js';
+import 'regenerator-runtime/runtime';
+
 import controlAccordion from './accordion';
 
 // eslint-disable-next-line no-unused-vars
