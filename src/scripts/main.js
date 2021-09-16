@@ -1,5 +1,6 @@
 import controlAccordion from './accordion';
 
+// eslint-disable-next-line no-unused-vars
 import * as sliders from './sliders';
 
 import {
