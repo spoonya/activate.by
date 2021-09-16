@@ -1,4 +1,10 @@
 @mixin title-section {
   font-size: 5rem;
   margin-bottom: 5rem;
+
+  @include media-tablet-lg {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+  }
 }

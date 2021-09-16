@@ -1,9 +1,20 @@
 .contacts {
   margin-bottom: 10rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
 }
 
 .contacts__title {
   @include title-section;
+}
+
+.contacts__list {
+  @include media-tablet-sm {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .contacts__item {
@@ -20,6 +31,14 @@
       margin: 0 10px;
 
       font-size: 4rem;
+
+      @include media-tablet-lg {
+        font-size: 18px;
+      }
+    }
+
+    @include media-tablet-lg {
+      margin-bottom: 20px;
     }
   }
 
@@ -29,6 +48,10 @@
     font-size: 3rem;
     letter-spacing: 0.58px;
     color: $color-primary-alpha;
+
+    @include media-tablet-lg {
+      font-size: 18px;
+    }
 
     &::after {
       position: absolute;

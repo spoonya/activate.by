@@ -1,11 +1,16 @@
-const swiperRecommend = new Swiper('#swiper-recommend', {
+const swiperReviews = new Swiper('#swiper-reviews', {
   slidesPerColumnFill: 'row',
 
-  spaceBetween: 20,
+  spaceBetween: 40,
 
   resizeObserver: true,
   observer: true,
   observeParents: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
 
   breakpoints: {
     320: {
@@ -21,9 +26,9 @@ const swiperRecommend = new Swiper('#swiper-recommend', {
     1200: {
       slidesPerGroup: 1,
       slidesPerColumn: 1,
-      slidesPerView: 4
+      slidesPerView: 3
     }
   }
 });
 
-export default swiperRecommend;
+export default swiperReviews;

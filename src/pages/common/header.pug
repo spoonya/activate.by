@@ -4,11 +4,14 @@ header.header
       .header__group
         a.header__logo-link(href="index.html" aria-label="Главная")
           img.header__logo(src="images/common/logo.png", alt="activate.by")
+        button#burger.burger(aria-label="Бургер-меню")
+          span
         form.header__search(name="search", method="GET", action="#")
           input.header__search-input(name="search-input", type="text", placeholder="Поиск", required)
-          +icon('header__search-icon', 'search')
+          button.header__search-button
+            +icon('header__search-icon', 'search')
       .header__group
-        nav.header__menu
+        nav#menu.header__menu
           ul
             li
               a(href="catalog.html") Каталог

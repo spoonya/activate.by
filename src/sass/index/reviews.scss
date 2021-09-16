@@ -1,20 +1,25 @@
 .reviews {
+  position: relative;
+
   margin-bottom: 10rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
 }
 
 .reviews__title {
   @include title-section;
 }
 
-.reviews__list {
-  display: flex;
-  justify-content: space-between;
-}
-
 .reviews__item {
   position: relative;
 
   width: 30.5%;
+
+  @include media-laptop {
+    width: 32%;
+  }
 
   &::before {
     content: '“';
@@ -33,16 +38,25 @@
     line-height: 1.6;
 
     margin-bottom: 3rem;
+
+    @include media-laptop {
+      font-size: 16px;
+    }
   }
 
   &-author {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     font-size: 1.8rem;
     color: $color-secondary-alpha;
     line-height: 1.78;
     font-weight: 500;
+
+    @include media-laptop {
+      font-size: 14px;
+    }
 
     p:first-child {
       &::after {
@@ -55,6 +69,11 @@
 
         background-color: $color-secondary-alpha;
         border-radius: 50%;
+
+        @include media-laptop {
+          width: 4px;
+          height: 4px;
+        }
       }
     }
   }

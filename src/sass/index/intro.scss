@@ -1,17 +1,29 @@
 .intro {
   margin-bottom: 8rem;
   padding-top: 39px;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
 }
 
 .intro__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-tablet-sm {
+    flex-direction: column;
+  }
 }
 
 .intro__info {
   max-width: 53rem;
   width: 100%;
+
+  @include media-tablet-sm {
+    order: 1;
+  }
 }
 
 .intro__title {
@@ -19,6 +31,10 @@
   line-height: 1.4;
 
   margin-bottom: 2rem;
+
+  @include media-tablet-sm {
+    font-size: 25px;
+  }
 }
 
 .intro__txt {
@@ -26,8 +42,26 @@
   color: $color-primary-gamma;
 
   margin-bottom: 6rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 30px;
+  }
 }
 
 .intro__img {
   max-width: 73rem;
+
+  @include media-laptop {
+    max-width: 60rem;
+  }
+
+  @include media-tablet-lg {
+    max-width: 40rem;
+  }
+
+  @include media-tablet-sm {
+    margin-bottom: 20px;
+
+    max-width: 244px;
+  }
 }

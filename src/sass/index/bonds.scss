@@ -1,5 +1,9 @@
 .bonds {
   margin-bottom: 12rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
 }
 
 .bonds__title {
@@ -12,10 +16,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-tablet-lg {
+    flex-direction: column;
+  }
 }
 
 .bonds__img {
   margin-right: 5.3rem;
+  max-width: 61.2rem;
+
+  @include media-laptop {
+    max-width: 40rem;
+
+    margin-right: 20px;
+  }
+
+  @include media-tablet-lg {
+    max-width: 350px;
+  }
+
+  @include media-tablet-sm {
+    max-width: 270px;
+  }
 }
 
 .bonds__info {
@@ -24,6 +47,10 @@
     line-height: 1.6;
 
     margin-bottom: 6.8rem;
+
+    @include media-tablet-lg {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -43,6 +70,10 @@
   padding: 2rem;
 
   margin-bottom: 2rem;
+
+  @include media-smartphone-lg {
+    width: 100%;
+  }
 
   &-icon {
     width: 30px;

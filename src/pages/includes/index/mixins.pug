@@ -22,7 +22,7 @@ mixin productItem(link, img, title, priceSale, priceUsual, isNew=false)
         p.products__item-price-usual= priceUsual
 
 mixin reviewsItem(txt, author, program)
-  li.reviews__item
+  .reviews__item.swiper-slide
     p.reviews__item-txt= txt
     .reviews__item-author
       p= author

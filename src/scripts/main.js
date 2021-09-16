@@ -15,6 +15,7 @@ import {
 
 import { validateFormCart } from './forms';
 import controlModal from './modal';
+import { controlBurger } from './header';
 
 controlAccordion();
 selectActiveFilter();
@@ -25,3 +26,4 @@ calcActiveFilters();
 validateFormCart();
 
 controlModal();
+controlBurger();

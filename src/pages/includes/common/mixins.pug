@@ -24,7 +24,7 @@ mixin sectionContacts
           a.contacts__item-link(href="https://yandex.ru/maps/?um=constructor%3A5f20e6203c6128edc99146fcd6dec8429ec326c3a57851abc291a83163331df5&source=constructorLink" rel="noopener" target="_blank") Беларусь, Минская область, Жодино, Советская улица, 22А
 
 mixin filters(filterArr)
-  ul#filter.filters
+  ul#filter.filters.container
     li.filters__item: button.filters__button(data-filter-target="all") Все
     for button in filterArr
       li.filters__item: button.filters__button(data-filter-target=button.dataAttr)= button.label

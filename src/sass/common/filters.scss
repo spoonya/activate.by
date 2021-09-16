@@ -1,11 +1,33 @@
 .filters {
   display: flex;
+  flex-wrap: wrap;
 
   margin-bottom: 3rem;
 
+  @include media-tablet-sm {
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+
+    scrollbar-width: none;
+
+    flex-wrap: nowrap;
+
+    margin-bottom: 0;
+  }
+
   &__item {
+    white-space: nowrap;
+
     &:not(:last-child) {
       margin-right: 10px;
+
+      @include media-laptop {
+        margin-bottom: 10px;
+      }
     }
   }
 
