@@ -24,15 +24,15 @@ mixin sectionContacts
           a.contacts__item-link(href="https://yandex.ru/maps/?um=constructor%3A5f20e6203c6128edc99146fcd6dec8429ec326c3a57851abc291a83163331df5&source=constructorLink" target="_blank") Беларусь, Минская область, Жодино, Советская улица, 22А
 
 mixin filters(filterArr)
-  ul.filters
-    li.filters__item: button.filters__button.filters__button--active Все
+  ul#filter.filters
+    li.filters__item: button.filters__button(data-filter-target="all") Все
     for button in filterArr
-      li.filters__item: button.filters__button= button
+      li.filters__item: button.filters__button(data-filter-target=button.dataAttr)= button.label
 
 mixin accordion(faqArr)
   #accordion.accordion
     for item in faqArr
-      details.accordion__details
+      details.accordion__details(data-filter= item.dataAttr)
         summary.accordion__summary
           span= item.question
           +icon('accordion__summary-icon', 'plus')

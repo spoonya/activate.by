@@ -54,6 +54,7 @@
 
     .products__item-img {
       max-height: 40rem;
+      min-height: 40rem;
     }
 
     .products__item-title {
@@ -127,6 +128,8 @@
     object-fit: contain;
 
     max-height: 25rem;
+    min-height: 25rem;
+    height: 100%;
   }
 
   &-info {

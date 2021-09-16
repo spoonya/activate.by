@@ -1,0 +1,72 @@
+extends common/layout
+
+include includes/catalog/mixins
+
+block content
+  main
+    section.catalog
+      .container
+        .catalog__inner
+          form.catalog__filters(action="#" method="GET")
+            .catalog__filters-group
+              h2.catalog__filters-title Категории
+              +catalogFilters('Антивирусы', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+              ])
+              +catalogFilters('Офисные программы', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+              ])
+              +catalogFilters('ОС', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+              ])
+              +catalogFilters('Работа с текстом', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+              ])
+              +catalogFilters('Работа с файлами', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+              ])
+              +catalogFilters('Графика и дизайн', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+              ])
+              +catalogFilters('Образование и наука', [
+                {value: 'kaspersky', txt: 'Kaspersky'},
+                {value: 'avast', txt: 'Avast'},
+                {value: 'dr.web', txt: 'Dr.Web'},
+              ])
+            .catalog__filters-group
+              h2.catalog__filters-title Срок ключа
+              #filter-slider.catalog__filters-slider
+              button#filters-reset.catalog__filters-reset(type="reset") Сбросить фильтры:&nbsp;
+                span#filters-reset-count.catalog__filters-reset-count 1
+          .catalog__content
+            form.catalog__sort(action="#" method="GET")
+              select
+                option(value="popular" selected) По популярности
+                option(value="price-asc") По цене (возр.)
+                option(value="price-desc") По цене (убыв.)
+            .catalog__items
+              +productCard('#', 'pdd/pdd-2.png', '13.5 BYN', 'ФотоВИНТАЖ 3.0')
+              +productCard('#', 'photovint/photovint-1.png', '27.73 BYN', 'Kaspersky Total Security')
+              +productCard('#', 'pdfcommander/pdfcommander-1.png', '33.5 BYN', 'PDF Commander 2.0')
+              +productCard('#', 'pdd/pdd-2.png', '13.5 BYN', 'ФотоВИНТАЖ 3.0')
+              +productCard('#', 'photovint/photovint-1.png', '27.73 BYN', 'Kaspersky Total Security')
+              +productCard('#', 'pdfcommander/pdfcommander-1.png', '33.5 BYN', 'PDF Commander 2.0')
+              +productCard('#', 'pdd/pdd-2.png', '13.5 BYN', 'ФотоВИНТАЖ 3.0')
+              +productCard('#', 'photovint/photovint-1.png', '27.73 BYN', 'Kaspersky Total Security')
+
+    //Contacts
+    +sectionContacts

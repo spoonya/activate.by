@@ -60,13 +60,14 @@ select {
   appearance: none;
   border: none;
   font: inherit;
+  cursor: pointer;
 
   &:focus {
     outline: 0;
   }
 
-  &:focus-visible {
-    @include outline;
+  &:focus-within {
+    border-color: $color-secondary-gamma;
   }
 }
 
@@ -92,7 +93,7 @@ input {
   outline: 0;
 
   &:focus {
-    border-color: $color-primary-alpha;
+    border-color: $color-secondary-gamma;
   }
 }
 
@@ -135,6 +136,8 @@ button {
 
 details summary {
   cursor: pointer;
+
+  user-select: none;
 
   &:focus {
     outline: 0;
@@ -222,4 +225,13 @@ body {
 
 .scroll-hidden {
   overflow: hidden;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

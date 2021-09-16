@@ -1,6 +1,12 @@
+import { DOM } from './constants';
+
 function onToggle(event) {
+  const detailsOpened = DOM.details.filter((el) => el.hasAttribute('open'));
+
+  if (!detailsOpened.length) return;
+
   if (event.target.open) {
-    document.querySelectorAll('#accordion > details[open]').forEach((el) => {
+    detailsOpened.forEach((el) => {
       if (el === event.target) {
         return;
       }
@@ -11,9 +17,9 @@ function onToggle(event) {
 }
 
 function controlAccordion() {
-  document
-    .querySelectorAll('#accordion > details')
-    .forEach((el) => el.addEventListener('toggle', onToggle));
+  if (!DOM.details.length) return;
+
+  DOM.details.forEach((el) => el.addEventListener('toggle', onToggle));
 }
 
 export default controlAccordion;

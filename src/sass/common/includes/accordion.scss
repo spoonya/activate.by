@@ -5,8 +5,10 @@
 
   padding: 2rem;
 
-  &:not(:last-child) {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  &.hidden {
+    display: none;
   }
 
   &[open] {
@@ -37,8 +39,6 @@
   align-items: center;
   justify-content: space-between;
 
-  user-select: none;
-
   span {
     font-size: 2.4rem;
     line-height: 1.33;
@@ -63,16 +63,5 @@
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translate(0, -5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
   }
 }

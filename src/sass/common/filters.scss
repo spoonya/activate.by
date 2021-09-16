@@ -27,7 +27,7 @@
       border-color 0.08s linear;
 
     &:hover,
-    &--active {
+    &.active {
       background-color: $color-secondary-gamma;
       color: $color-primary-psi;
       border-color: $color-primary-alpha;

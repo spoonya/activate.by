@@ -1,0 +1,11 @@
+mixin catalogFilters(summary, inputsArr)
+  details.catalog__filters-details
+    summary.catalog__filters-summary
+      +icon('catalog__filters-summary-icon', 'arrow-right')
+      span= summary
+    .catalog__filters-inputs
+      for input in inputsArr
+        label.catalog__filters-label
+          input.catalog__filters-checkbox(type="checkbox" name="filter-value" value= input.value)
+          span.catalog__filters-checkbox-styled
+          span.catalog__filters-checkbox-txt= input.txt
