@@ -44,9 +44,9 @@ mixin accordion(faqArr)
 mixin productCounter
   .product-counter
     .product-counter__group
-      button.product-counter__control -
+      button.product-counter__control(arial-label="Отнять") -
       p.product-counter__count 1
-      button.product-counter__control +
+      button.product-counter__control(arial-label="Прибавить") +
     p.product-counter__price 53.55 BYN
 
 mixin crumbs(arrLinks)
@@ -60,7 +60,7 @@ mixin crumbs(arrLinks)
 mixin faqDescrip
   .faq__descrip
     h2.faq__descrip-title Не нашли ответ?
-    p.faq__descrip
+    p
       |Проверьте раздел
       a.faq__descrip-link(href="#") FAQ
       |или напишите нам на почту. Мы обязательно вам поможем.

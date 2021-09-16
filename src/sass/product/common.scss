@@ -1,11 +1,20 @@
 .product-section-title {
   font-size: 3rem;
   margin-bottom: 3rem;
+
+  @include media-tablet-lg {
+    font-size: 20px;
+  }
 }
 
 .product-txt {
   font-size: 2rem;
   line-height: 32px;
+
+  @include media-tablet-lg {
+    font-size: 16px;
+    line-height: 1.7;
+  }
 
   p {
     &:not(:last-of-type) {

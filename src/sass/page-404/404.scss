@@ -4,11 +4,15 @@
   align-items: center;
   flex-direction: column;
 
-  padding-top: 10.2rem;
-  padding-bottom: 13.4rem;
+  margin: 10rem 0 13rem;
+
+  @include media-tablet-lg {
+    margin: 50px 0;
+  }
 
   &__title {
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   &__img {

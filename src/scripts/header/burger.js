@@ -24,9 +24,12 @@ function toggleBurger() {
 
 function closeBurger() {
   DOM.body.classList.remove(CLASSES.scrollHidden);
-  DOM.overlay.classList.remove(CLASSES.active);
   burger.classList.remove(CLASSES.active);
   menu.classList.remove(CLASSES.active);
+
+  if (isMediaBreakpoint()) {
+    DOM.overlay.classList.remove(CLASSES.active);
+  }
 }
 
 function closeBurgerOnMedia() {

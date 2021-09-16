@@ -29,6 +29,13 @@
   overflow-y: auto;
   overflow-x: hidden;
 
+  @include media-tablet-lg {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    padding: 20px;
+  }
+
   &.active {
     pointer-events: all;
 
@@ -54,8 +61,26 @@
     .product-counter {
       margin-bottom: 0;
 
+      @include media-tablet-sm {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__group {
+        @include media-tablet-sm {
+          margin-right: 0;
+        }
+      }
+
       &__price {
         font-size: 2.2rem;
+        font-weight: 500;
+
+        @include media-tablet-sm {
+          order: -1;
+
+          margin-bottom: 10px;
+        }
       }
 
       &__control {
@@ -83,9 +108,19 @@
         margin-bottom: 10px;
       }
 
+      @include media-tablet-sm {
+        flex-direction: column;
+      }
+
       &-info {
         display: flex;
         align-items: center;
+
+        @include media-tablet-sm {
+          flex-direction: column;
+
+          margin-bottom: 20px;
+        }
       }
 
       &-title {
@@ -102,6 +137,11 @@
 
         object-fit: contain;
         max-width: 80px;
+
+        @include media-tablet-sm {
+          margin-bottom: 15px;
+          margin-right: 0;
+        }
       }
     }
   }
@@ -135,12 +175,23 @@
     align-items: center;
     justify-content: space-between;
 
+    @include media-tablet-sm {
+      flex-direction: column;
+      align-items: unset;
+    }
+
     &-control {
       position: relative;
 
       flex: 1;
 
       margin-right: 2rem;
+
+      @include media-tablet-sm {
+        margin-right: 0;
+
+        margin-bottom: 20px;
+      }
 
       &.success {
         border-color: $color-primary-beta;
@@ -165,6 +216,12 @@
       color: $color-secondary-beta;
 
       visibility: hidden;
+
+      @include media-tablet-sm {
+        top: -16px;
+
+        font-size: 12px;
+      }
     }
 
     &-input {
@@ -184,10 +241,20 @@
       padding: 0 4.2rem;
       align-self: stretch;
 
-      background: $color-primary-alpha;
+      background-color: $color-primary-alpha;
 
       box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
+
+      transition: background-color 0.1s linear;
+
+      &:hover {
+        background-color: lighten($color-primary-alpha, 7);
+      }
+
+      @include media-tablet-sm {
+        min-height: 4.8rem;
+      }
     }
   }
 

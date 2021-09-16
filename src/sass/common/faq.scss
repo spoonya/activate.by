@@ -1,27 +1,55 @@
 .faq {
   margin: 10rem 0 8rem;
+
+  @include media-tablet-lg {
+    margin: 40px 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .filters,
+  .accordion,
+  .faq__descrip {
+    padding: 0 15px;
+  }
 }
 
 .faq__inner {
   display: flex;
   justify-content: space-between;
+
+  @include media-laptop {
+    flex-direction: column;
+  }
 }
 
 .faq__content {
-  max-width: 86rem;
+  max-width: 860px;
 
   width: 100%;
+
+  @include media-laptop {
+    max-width: unset;
+  }
 }
 
 .faq__content-title {
   @include title-section;
 
   font-size: 3rem;
+
+  padding: 0 15px;
 }
 
 .faq__descrip-title {
   font-size: 3rem;
   margin-bottom: 3rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 15px;
+  }
 }
 
 .faq__descrip {
@@ -29,6 +57,10 @@
   line-height: 1.6;
 
   max-width: 31rem;
+
+  @include media-laptop {
+    max-width: unset;
+  }
 
   &-link {
     margin: 0 5px;

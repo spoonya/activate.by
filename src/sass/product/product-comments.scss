@@ -1,6 +1,10 @@
 .product-comments {
   margin-bottom: 10rem;
 
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
+
   .product-section-title {
     margin-bottom: 2rem;
   }
@@ -14,6 +18,10 @@
 
 .product-comments__list {
   max-width: 86rem;
+
+  @include media-tablet-lg {
+    max-width: unset;
+  }
 }
 
 .product-comments__item {
@@ -30,6 +38,14 @@
     margin-bottom: 2rem;
   }
 
+  @include media-tablet-lg {
+    padding: 15px;
+  }
+
+  @include media-smartphone-lg {
+    flex-direction: column;
+  }
+
   &-img {
     max-width: 8rem;
 
@@ -38,11 +54,19 @@
     border-radius: 50%;
 
     object-fit: contain;
+
+    @include media-smartphone-lg {
+      margin: 0 auto 10px;
+    }
   }
 
   &-txt {
     font-size: 2rem;
     line-height: 1.6;
+
+    @include media-tablet-lg {
+      font-size: 16px;
+    }
   }
 }
 
@@ -59,6 +83,10 @@
   align-items: center;
 
   margin-bottom: 1rem;
+
+  @include media-smartphone-lg {
+    flex-direction: column;
+  }
 
   &-name {
     font-size: 1.8rem;

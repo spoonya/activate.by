@@ -1,10 +1,18 @@
 .about {
   margin: 10rem 0;
+
+  @include media-tablet-lg {
+    margin: 50px 0;
+  }
 }
 
 .about__inner {
   display: flex;
   justify-content: space-between;
+
+  @include media-tablet-lg {
+    flex-direction: column;
+  }
 }
 
 .about__info-title,
@@ -22,6 +30,16 @@
 
 .about__info {
   max-width: 86rem;
+  width: 100%;
+
+  @include media-laptop {
+    max-width: 75rem;
+  }
+
+  @include media-tablet-lg {
+    max-width: unset;
+    margin-bottom: 30px;
+  }
 }
 
 .about__txt {
@@ -33,12 +51,24 @@
 
     &:not(:last-child) {
       margin-bottom: 5rem;
+
+      @include media-tablet-lg {
+        margin-bottom: 20px;
+      }
     }
   }
 }
 
 .about__img {
   border-radius: 4px;
+  max-width: 86rem;
+  width: 100%;
+
+  @include media-tablet-lg {
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
 }
 
 .about__item {
@@ -49,6 +79,7 @@
 
   padding: 2rem;
 
+  background-color: $color-primary-psi;
   border: 1px solid $color-tertiary-alpha;
   border-radius: 4px;
   box-shadow: 0px 5px 8px rgba(82, 82, 82, 0.07);

@@ -1,8 +1,6 @@
 .header {
   position: relative;
 
-  z-index: 10;
-
   padding-top: 10px;
 
   background-color: $color-primary-psi;
@@ -10,10 +8,13 @@
   @include media-tablet-sm {
     padding: 10px 0;
 
+    z-index: 10;
+
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }

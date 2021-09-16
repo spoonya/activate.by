@@ -1,3 +1,13 @@
 .product-recommend {
+  position: relative;
+
   margin-bottom: 10rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 50px;
+  }
+
+  .swiper-pagination {
+    bottom: -35px;
+  }
 }

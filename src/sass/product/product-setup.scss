@@ -1,3 +1,7 @@
 .product-setup {
   margin-bottom: 8rem;
+
+  @include media-tablet-lg {
+    margin-bottom: 40px;
+  }
 }

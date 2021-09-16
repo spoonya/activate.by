@@ -7,6 +7,11 @@ const swiperRecommend = new Swiper('#swiper-recommend', {
   observer: true,
   observeParents: true,
 
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
   breakpoints: {
     320: {
       slidesPerGroup: 1,

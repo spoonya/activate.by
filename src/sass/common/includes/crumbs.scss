@@ -40,5 +40,9 @@
         color: $color-secondary-alpha;
       }
     }
+
+    @include media-tablet-sm {
+      margin-bottom: 5px;
+    }
   }
 }

@@ -1,3 +1,9 @@
+.accordion {
+  @include media-laptop {
+    margin-bottom: 25px;
+  }
+}
+
 .accordion__details {
   border: 1px solid $color-tertiary-alpha;
   box-shadow: 0px 5px 8px rgba(82, 82, 82, 0.07);
@@ -42,12 +48,31 @@
   span {
     font-size: 2.4rem;
     line-height: 1.33;
+
+    margin-right: 10px;
+
+    @include media-tablet-lg {
+      font-size: 18px;
+    }
+
+    @include media-smartphone-lg {
+      font-size: 16px;
+    }
   }
 }
 
 .accordion__summary-icon {
-  width: 16px;
-  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+
+  @include media-tablet-sm {
+    min-width: 12px;
+    min-height: 12px;
+    max-width: 12px;
+    max-height: 12px;
+  }
 
   &--active {
     display: none;
@@ -59,6 +84,14 @@
 
   p {
     font-size: 2rem;
+
+    @include media-tablet-lg {
+      font-size: 16px;
+    }
+
+    @include media-smartphone-lg {
+      font-size: 14px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 1.5rem;
