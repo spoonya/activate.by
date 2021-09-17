@@ -12,6 +12,7 @@ const DOM = {
   details: [...document.querySelectorAll('#accordion > details')],
   filter: document.querySelector('#filter'),
   filtersResetCount: document.querySelector('#filters-reset-count'),
+  filtersSlider: document.querySelector('#filters-slider'),
   overlay: document.querySelector('#overlay')
 };
 

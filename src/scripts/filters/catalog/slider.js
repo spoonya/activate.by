@@ -1,17 +1,31 @@
 import noUiSlider from 'nouislider';
 
-const slider = document.querySelector('#filter-slider');
+import { DOM } from '../../constants';
+
+const tooltipValues = {
+  0: '1 месяц',
+  1: '1 год',
+  2: '2 года'
+};
 
 function createFilterSlider() {
-  if (!slider) return;
+  if (!DOM.filtersSlider) return;
 
-  noUiSlider.create(slider, {
-    start: [1, 12],
+  noUiSlider.create(DOM.filtersSlider, {
+    start: [0, 1],
     connect: true,
+    tooltips: {
+      to(value) {
+        return tooltipValues[value];
+      },
+      from(value) {
+        return value;
+      }
+    },
     step: 1,
     range: {
-      min: [1],
-      max: [24]
+      min: [0],
+      max: [2]
     }
   });
 }

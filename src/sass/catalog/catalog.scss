@@ -247,6 +247,12 @@
       margin-bottom: 40px;
     }
 
+    .noUi-tooltip {
+      position: absolute;
+      top: 25px;
+      white-space: nowrap;
+    }
+
     .noUi-connects {
       border-radius: 3px;
       overflow: hidden;

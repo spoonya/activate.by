@@ -60,9 +60,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "core-js": "^2.6.12",
     "normalize.css": "^8.0.1",
     "nouislider": "^15.4.0",
-    "core-js": "^2.6.12",
     "regenerator-runtime": "^0.11.1"
   },
   "editorconfig-cli": [
