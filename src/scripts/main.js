@@ -10,12 +10,13 @@ import {
   selectActiveFilter,
   createFilterSlider,
   resetFiltersOnClick,
-  calcActiveFilters
+  calcActiveFilters,
+  controlFiltersBurger
 } from './filters';
 
 import { validateFormCart } from './forms';
 import controlModal from './modal';
-import { controlBurger } from './header';
+import { controlHeaderBurger } from './header';
 
 controlAccordion();
 selectActiveFilter();
@@ -26,4 +27,5 @@ calcActiveFilters();
 validateFormCart();
 
 controlModal();
-controlBurger();
+controlHeaderBurger();
+controlFiltersBurger();

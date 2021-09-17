@@ -36,7 +36,7 @@ function closeBurgerOnMedia() {
   if (!isMediaBreakpoint()) closeBurger();
 }
 
-function controlBurger() {
+function controlHeaderBurger() {
   toggleBurger();
 
   menuLinks.forEach((link) => {
@@ -52,5 +52,5 @@ DOM.overlay.addEventListener('click', () => {
 
 window.addEventListener('resize', closeBurgerOnMedia);
 
-export default controlBurger;
+export default controlHeaderBurger;
 export { isBurgerOpened, closeBurger };
