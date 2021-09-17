@@ -6,6 +6,10 @@
   @include media-tablet-lg {
     margin-bottom: 50px;
   }
+
+  .swiper-pagination {
+    bottom: -25px;
+  }
 }
 
 .reviews__title {

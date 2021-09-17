@@ -18,12 +18,12 @@ const swiperReviews = new Swiper('#swiper-reviews', {
       slidesPerColumn: 1,
       slidesPerView: 1
     },
-    992: {
+    767: {
       slidesPerGroup: 1,
       slidesPerColumn: 1,
       slidesPerView: 2
     },
-    1200: {
+    992: {
       slidesPerGroup: 1,
       slidesPerColumn: 1,
       slidesPerView: 3
