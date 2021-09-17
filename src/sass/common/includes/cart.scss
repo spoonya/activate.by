@@ -1,7 +1,7 @@
 .cart {
   position: fixed;
 
-  z-index: 10;
+  z-index: 11;
 
   top: 50%;
   left: 50%;
@@ -30,8 +30,7 @@
   overflow-x: hidden;
 
   @include media-tablet-lg {
-    min-height: 100vh;
-    min-width: 100vw;
+    max-width: 95vw;
 
     padding: 20px;
   }
@@ -130,6 +129,11 @@
 
         max-width: 33rem;
         width: 100%;
+
+        @include media-tablet-sm {
+          max-width: unset;
+          text-align: center;
+        }
       }
 
       &-img {

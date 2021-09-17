@@ -2,7 +2,8 @@ const CLASSES = {
   active: 'active',
   hidden: 'hidden',
   scrollHidden: 'scroll-hidden',
-  modal: 'modal'
+  modal: 'modal',
+  topZindex: 'top-z'
 };
 
 const DOM = {

@@ -93,6 +93,20 @@
   &-title {
     display: flex;
     align-items: baseline;
+
+    &--short {
+      display: none;
+    }
+
+    @include media-tablet-sm {
+      &--short {
+        display: flex;
+      }
+
+      &--short + & {
+        display: none;
+      }
+    }
   }
 }
 

@@ -6,14 +6,16 @@ function openModal(modal) {
   DOM.body.classList.add(CLASSES.scrollHidden);
   modal.classList.add(CLASSES.active);
   DOM.overlay.classList.add(CLASSES.active);
+  DOM.overlay.classList.add(CLASSES.topZindex);
 }
 
 function closeModal(modal) {
   if (!modal) return;
 
   modal.classList.remove(CLASSES.active);
-  DOM.overlay.classList.remove(CLASSES.active);
   DOM.body.classList.remove(CLASSES.scrollHidden);
+  DOM.overlay.classList.remove(CLASSES.active);
+  DOM.overlay.classList.remove(CLASSES.topZindex);
 }
 
 function controlModal() {

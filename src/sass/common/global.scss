@@ -222,6 +222,10 @@ body {
 
     pointer-events: all;
   }
+
+  &.top-z {
+    z-index: 10;
+  }
 }
 
 .scroll-hidden {
