@@ -81,11 +81,13 @@ mixin cart
       ul.cart__order-list
         li.cart__order-item
           .cart__order-item-info
+            a.cart__order-item-link(href="product.html" aria-label="Страница товара")
             img.cart__order-item-img(src="images/products/kaspersky/kaspersky-1.png", width="80", height="80" alt="")
             h4.cart__order-item-title Kaspersky Total Security (1 год)
           +productCounter
         li.cart__order-item
           .cart__order-item-info
+            a.cart__order-item-link(href="product.html" aria-label="Страница товара")
             img.cart__order-item-img(src="images/products/windows/windows7.png", width="80", height="80" alt="")
             h4.cart__order-item-title Лицензионный ключ активации для Windows 10 Home (Домашняя)
           +productCounter
