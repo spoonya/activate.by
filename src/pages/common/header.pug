@@ -12,14 +12,17 @@ header.header
             +icon('header__search-icon', 'search')
       .header__group
         nav#menu.header__menu
-          ul
-            li
-              a(href="catalog.html") Каталог
-            li
-              a(href="about.html") О нас
-            li
-              a(href="faq.html") FAQ
-            li
-              a(href="#contacts") Контакты
+          ul.header__menu-list
+            li.header__menu-item
+              a.header__menu-link(href="catalog.html") Каталог
+              +icon('header__menu-arrow', 'arrow-down')
+              ul.header__menu-sublist
+                +categories('header__menu-subitem', 'header__menu-sublink')
+            li.header__menu-item
+              a.header__menu-link(href="about.html") О нас
+            li.header__menu-item
+              a.header__menu-link(href="faq.html") FAQ
+            li.header__menu-item
+              a.header__menu-link(href="#contacts") Контакты
         button#cart-button.header__cart(aria-label="Корзина" data-modal-target="cart")
           +icon('header__cart-icon', 'cart')

@@ -12,19 +12,13 @@ block content
         .catalog__inner
           form#filters-catalog.catalog__filters(action="#" method="GET")
             .catalog__filters-wrapper
-              .catalog__filters-group
+              button#filters-close.catalog__filters-close(type="button" aria-label="Закрыть")
+                +icon('catalog__filters-close-icon', 'close')
+              .catalog__filters-group.categories
                 .catalog__filters-top
-                  button#filters-close.catalog__filters-close(aria-label="Закрыть")
-                    +icon('catalog__filters-close-icon', 'close')
                   h2.catalog__filters-title Категории
                   ul.catalog__filters-links
-                    li: a(href="#") Антивирусы
-                    li: a(href="#") Офисные программы
-                    li: a(href="#") ОС
-                    li: a(href="#") Работа с текстом
-                    li: a(href="#") Работа с файлами
-                    li: a(href="#") Графика и дизайн
-                    li: a(href="#") Образование и наука
+                    +categories
               .catalog__filters-group
                 h2.catalog__filters-title Срок ключа
                 #filters-slider.catalog__filters-slider
