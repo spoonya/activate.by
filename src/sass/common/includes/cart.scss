@@ -210,7 +210,9 @@
       }
 
       &.success {
-        border-color: $color-primary-beta;
+        .cart__form-input {
+          border-color: $color-primary-beta;
+        }
       }
 
       &.error {
@@ -218,7 +220,9 @@
           visibility: visible;
         }
 
-        border-color: $color-secondary-beta;
+        .cart__form-input {
+          border-color: $color-secondary-beta;
+        }
       }
     }
 
