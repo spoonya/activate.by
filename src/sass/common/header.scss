@@ -134,8 +134,10 @@
 
     margin-top: 10px;
 
-    &.active {
-      display: flex;
+    @include media-tablet-sm {
+      &.active {
+        display: flex;
+      }
     }
   }
 
@@ -176,6 +178,10 @@
 
   &-sublink {
     color: $color-primary-alpha;
+
+    &.current {
+      color: $color-primary-beta;
+    }
   }
 
   &-arrow {
@@ -198,7 +204,7 @@
       right: 5px;
     }
 
-    @include media-tablet-lg {
+    @include media-tablet-sm {
       display: flex;
     }
   }

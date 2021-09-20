@@ -8,6 +8,7 @@ const CLASSES = {
 
 const DOM = {
   body: document.querySelector('body'),
+  burger: document.querySelector('#burger'),
   catalogFilters: document.querySelectorAll('.catalog__filters-checkbox'),
   details: [...document.querySelectorAll('#accordion > details')],
   filter: document.querySelector('#filter'),

@@ -1,33 +1,46 @@
 import { CLASSES, DOM } from '../constants';
-import { isMediaBreakpoint } from '../helpers';
+import { isMediaBreakpoint, isOpened } from '../helpers';
 
-const burger = document.querySelector('#burger');
 const menu = document.querySelector('#menu');
 const menuLinks = menu.querySelectorAll('a');
+const menuArrows = document.querySelectorAll('.header__menu-arrow');
+const menuSublinks = document.querySelectorAll('.header__menu-sublink');
 
-function isBurgerOpened() {
-  if (!burger.classList.contains(CLASSES.active)) {
-    return false;
-  }
+function setMenuArrowsBehaviour() {
+  menuArrows.forEach((arrow) => {
+    arrow.addEventListener('click', () => {
+      const subMenu = arrow.nextElementSibling;
+      const currentArrow = arrow;
 
-  return true;
+      if (subMenu.classList.contains(CLASSES.active)) {
+        subMenu.classList.remove(CLASSES.active);
+        currentArrow.classList.remove(CLASSES.active);
+      } else {
+        subMenu.classList.add(CLASSES.active);
+        currentArrow.classList.add(CLASSES.active);
+      }
+    });
+  });
 }
 
 function toggleBurger() {
-  burger.addEventListener('click', () => {
+  DOM.burger.addEventListener('click', () => {
     DOM.body.classList.toggle(CLASSES.scrollHidden);
     DOM.overlay.classList.toggle(CLASSES.active);
-    burger.classList.toggle(CLASSES.active);
+    DOM.burger.classList.toggle(CLASSES.active);
     menu.classList.toggle(CLASSES.active);
   });
 }
 
 function closeBurger() {
   DOM.body.classList.remove(CLASSES.scrollHidden);
-  burger.classList.remove(CLASSES.active);
+  DOM.burger.classList.remove(CLASSES.active);
   menu.classList.remove(CLASSES.active);
 
-  if (isMediaBreakpoint()) {
+  if (
+    isMediaBreakpoint() ||
+    (!isMediaBreakpoint() && !isOpened(document.querySelector('.cart.modal')))
+  ) {
     DOM.overlay.classList.remove(CLASSES.active);
   }
 }
@@ -38,14 +51,19 @@ function closeBurgerOnMedia() {
 
 function controlHeaderBurger() {
   toggleBurger();
+  setMenuArrowsBehaviour();
 
   menuLinks.forEach((link) => {
+    link.addEventListener('click', closeBurger);
+  });
+
+  menuSublinks.forEach((link) => {
     link.addEventListener('click', closeBurger);
   });
 }
 
 DOM.overlay.addEventListener('click', () => {
-  if (isBurgerOpened()) {
+  if (isOpened(DOM.burger)) {
     closeBurger();
   }
 });
@@ -53,4 +71,4 @@ DOM.overlay.addEventListener('click', () => {
 window.addEventListener('resize', closeBurgerOnMedia);
 
 export default controlHeaderBurger;
-export { isBurgerOpened, closeBurger };
+export { closeBurger };

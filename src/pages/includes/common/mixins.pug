@@ -106,10 +106,10 @@ mixin cart
       button.cart__form-submit Оплатить
 
 mixin categories(classItem=null, classLink=null)
-  li(class= classItem): a(class= classLink href="#") Антивирусы
-  li(class= classItem): a(class= classLink href="#") Офисные программы
-  li(class= classItem): a(class= classLink href="#") ОС
-  li(class= classItem): a(class= classLink href="#") Работа с текстом
-  li(class= classItem): a(class= classLink href="#") Работа с файлами
-  li(class= classItem): a(class= classLink href="#") Графика и дизайн
-  li(class= classItem): a(class= classLink href="#") Образование и наука
+  li(class= classItem): a.category-link(class= classLink href="/catalog.html") Антивирусы
+  li(class= classItem): a.category-link(class= classLink href="#") Офисные программы
+  li(class= classItem): a.category-link(class= classLink href="#") ОС
+  li(class= classItem): a.category-link(class= classLink href="#") Работа с текстом
+  li(class= classItem): a.category-link(class= classLink href="#") Работа с файлами
+  li(class= classItem): a.category-link(class= classLink href="#") Графика и дизайн
+  li(class= classItem): a.category-link(class= classLink href="#") Образование и наука

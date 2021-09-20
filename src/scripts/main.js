@@ -9,7 +9,8 @@ import {
   createFilterSlider,
   resetFiltersOnClick,
   calcActiveFilters,
-  controlFiltersBurger
+  controlFiltersBurger,
+  selectCurrentCategory
 } from './filters';
 import { validateFormCart } from './forms';
 import controlModal from './modal';
@@ -21,6 +22,7 @@ selectActiveFilter();
 createFilterSlider();
 resetFiltersOnClick();
 calcActiveFilters();
+selectCurrentCategory();
 
 validateFormCart();
 

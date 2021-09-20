@@ -146,6 +146,7 @@
 
       transition: color 0.1s linear;
 
+      &.current,
       &:hover {
         color: $color-primary-beta;
       }
