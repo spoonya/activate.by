@@ -18,7 +18,7 @@
 
   background-color: $color-primary-psi;
 
-  @include media-tablet-lg {
+  @include media-tablet-sm {
     display: none;
 
     position: fixed;
@@ -40,7 +40,7 @@
   &-wrapper {
     position: relative;
 
-    @include media-tablet-lg {
+    @include media-tablet-sm {
       overflow-y: auto;
       max-height: calc(100vh - 5px);
       padding-left: 15px;
@@ -62,7 +62,7 @@
 
     stroke: $color-primary-alpha;
 
-    @include media-tablet-lg {
+    @include media-tablet-sm {
       display: block;
     }
 
@@ -115,7 +115,7 @@
       margin-bottom: 6rem;
     }
 
-    @include media-tablet-lg {
+    @include media-tablet-sm {
       &.categories {
         display: none;
       }
@@ -368,7 +368,7 @@
 
     margin-bottom: 20px;
 
-    @include media-tablet-lg {
+    @include media-tablet-sm {
       display: flex;
     }
   }
@@ -406,7 +406,7 @@
 .catalog__sort {
   align-self: flex-end;
 
-  @include media-tablet-lg {
+  @include media-tablet-sm {
     align-self: unset;
   }
 

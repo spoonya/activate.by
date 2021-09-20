@@ -40,7 +40,7 @@ function closeBurger() {
   if (
     isMediaBreakpoint() ||
     (!isMediaBreakpoint() &&
-      !document.querySelector(`.modal.${CLASSES.active}`))
+      !document.querySelector(`.${CLASSES.modal}.${CLASSES.active}`))
   ) {
     DOM.overlay.classList.remove(CLASSES.active);
   }

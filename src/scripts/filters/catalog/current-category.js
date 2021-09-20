@@ -1,6 +1,6 @@
 function selectCurrentCategory() {
   const activeCategory = document.querySelectorAll(
-    `a[href*='${window.location.pathname}']`
+    `a[href='${window.location.pathname}']`
   );
 
   if (!activeCategory) return;
