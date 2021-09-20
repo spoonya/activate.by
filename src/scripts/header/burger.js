@@ -39,7 +39,8 @@ function closeBurger() {
 
   if (
     isMediaBreakpoint() ||
-    (!isMediaBreakpoint() && !isOpened(document.querySelector('.cart.modal')))
+    (!isMediaBreakpoint() &&
+      !document.querySelector(`.modal.${CLASSES.active}`))
   ) {
     DOM.overlay.classList.remove(CLASSES.active);
   }
