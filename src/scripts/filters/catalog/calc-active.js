@@ -7,11 +7,15 @@ function calcActiveFilters() {
 
   DOM.catalogFilters.forEach((el) => {
     el.addEventListener('change', () => {
+      count = parseInt(DOM.filtersResetCount.textContent, 10);
+
       if (el.checked) {
         count += 1;
-
-        DOM.filtersResetCount.textContent = count;
+      } else {
+        count -= 1;
       }
+
+      DOM.filtersResetCount.textContent = count;
     });
   });
 }
