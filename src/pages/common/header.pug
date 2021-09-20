@@ -8,7 +8,7 @@ header.header
           span
         form.header__search(name="search", method="GET", action="#")
           input.header__search-input(name="search-input", type="text", placeholder="Поиск", required)
-          button.header__search-button
+          button.header__search-button(aria-label="Поиск")
             +icon('header__search-icon', 'search')
       .header__group
         nav#menu.header__menu
