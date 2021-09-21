@@ -1,4 +1,4 @@
-import 'core-js';
+import 'core-js/es6/promise';
 import 'regenerator-runtime/runtime';
 
 import controlAccordion from './accordion';
