@@ -14,81 +14,81 @@ block content
             +linkButton('catalog.html', 'Смотреть каталог')
           img.intro__img(src="images/intro/intro.png", width="652", height="575", alt="")
 
-  //Products
-  section.products
-    h2.products__title.container Наша продукция
-    +filters([
-      {label: 'Антивирусы', dataAttr: "antivirus"},
-      {label: 'Офисные программы', dataAttr: "office"},
-      {label: 'ОС', dataAttr: "os"},
-      {label: 'Работа с текстом', dataAttr: "text"},
-      {label: 'Работа с файлами', dataAttr: "file"},
-      {label: 'Графика и дизайн', dataAttr: "design"},
-      {label: 'Образование и наука', dataAttr: "science"}
-    ])
-    .container
-      .products__inner
-        .products__items
-          +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
-          +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
-          +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
-          +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
-          +productItem('product.html', 'coreldraw/coreldraw-1.png', 'CorelDRAW Graphics', null, '482.30 BYN')
-        +linkButton('catalog.html', 'Смотреть больше', true)
+    //Products
+    section.products
+      h2.products__title.container Наша продукция
+      +filters([
+        {label: 'Антивирусы', dataAttr: "antivirus"},
+        {label: 'Офисные программы', dataAttr: "office"},
+        {label: 'ОС', dataAttr: "os"},
+        {label: 'Работа с текстом', dataAttr: "text"},
+        {label: 'Работа с файлами', dataAttr: "file"},
+        {label: 'Графика и дизайн', dataAttr: "design"},
+        {label: 'Образование и наука', dataAttr: "science"}
+      ])
+      .container
+        .products__inner
+          .products__items
+            +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+            +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
+            +productItem('product.html', 'coreldraw/coreldraw-1.png', 'CorelDRAW Graphics', null, '482.30 BYN')
+          +linkButton('catalog.html', 'Смотреть больше', true)
 
-  //Bonds
-  section.bonds
-    .container
-      h2.bonds__title Гарантии
-      .bonds__inner
-        img.bonds__img(src="images/bonds/bond.png", width="612", height="800", alt="")
-        .bonds__info
-          p.bonds__info-txt Вы приобретаете лицензионные ключи активации и получаете полную гарантию работоспособности! В случае проблем с запуском программ - Вам доступна техническая поддержка от разработчиков. Вы получите необходимую консультацию в кратчайшие сроки!
-          ul.bonds__features-list
-            li.bonds__features-item
-              +icon('bonds__features-item-icon', 'smile')
-              p.bonds__features-item-txt
-                |Более 3k проданных кодов и&nbsp;
-                span довольных клиентов
-            li.bonds__features-item
-              +icon('bonds__features-item-icon', 'smile')
-              p.bonds__features-item-txt
-                |Удобная оплата и&nbsp;
-                span возможность оформления рассрочки
-            li.bonds__features-item
-              +icon('bonds__features-item-icon', 'smile')
-              p.bonds__features-item-txt
-                |Обновление позиций по запросу и&nbsp;
-                span постоянные скидки и расспродажи
-            li.bonds__features-item
-              +icon('bonds__features-item-icon', 'smile')
-              p.bonds__features-item-txt
-                |Надежная&nbsp;
-                span защита платежей&nbsp;
-                |и ваших данных
+    //Bonds
+    section.bonds
+      .container
+        h2.bonds__title Гарантии
+        .bonds__inner
+          img.bonds__img(src="images/bonds/bond.png", width="612", height="800", alt="")
+          .bonds__info
+            p.bonds__info-txt Вы приобретаете лицензионные ключи активации и получаете полную гарантию работоспособности! В случае проблем с запуском программ - Вам доступна техническая поддержка от разработчиков. Вы получите необходимую консультацию в кратчайшие сроки!
+            ul.bonds__features-list
+              li.bonds__features-item
+                +icon('bonds__features-item-icon', 'smile')
+                p.bonds__features-item-txt
+                  |Более 3k проданных кодов и&nbsp;
+                  span довольных клиентов
+              li.bonds__features-item
+                +icon('bonds__features-item-icon', 'smile')
+                p.bonds__features-item-txt
+                  |Удобная оплата и&nbsp;
+                  span возможность оформления рассрочки
+              li.bonds__features-item
+                +icon('bonds__features-item-icon', 'smile')
+                p.bonds__features-item-txt
+                  |Обновление позиций по запросу и&nbsp;
+                  span постоянные скидки и расспродажи
+              li.bonds__features-item
+                +icon('bonds__features-item-icon', 'smile')
+                p.bonds__features-item-txt
+                  |Надежная&nbsp;
+                  span защита платежей&nbsp;
+                  |и ваших данных
 
-  //Reviews
-  section.reviews
-    .container
-        h2.reviews__title Отзывы
-        #swiper-reviews.swiper-container
-          .swiper-wrapper
-            +reviewsItem('Решил приобрести ключ для красных ПДД от АДрайв, хотя уже есть синий вариант от Нового Поворота (для перестраховки по вопросам).  Оплата и получение ключа - около минуты. Всё активировалось без проблем.', 'Иван Дулин', 'ПДД 2020 «Адрайв»')
-            +reviewsItem('Приобретал ключ для Адрайва. Хорошая цена. Доставка - почти сразу после оплаты, сообщением на телефон. Активировалось без проблем. Спасибо!', 'Николай', 'ПДД 2020 «Адрайв»')
-            +reviewsItem('Мне больше понравилась программа от Нового поворота. Хотя, я так думаю, примерно все они одинаковы. Только картинками отличаются... Буду учить. Вопросов при покупке не возникло. Всё продумано..', 'Анна С.', 'ПДД 2020 «Новый поворот»')
-          .swiper-pagination
+    //Reviews
+    section.reviews
+      .container
+          h2.reviews__title Отзывы
+          #swiper-reviews.swiper-container
+            .swiper-wrapper
+              +reviewsItem('Решил приобрести ключ для красных ПДД от АДрайв, хотя уже есть синий вариант от Нового Поворота (для перестраховки по вопросам).  Оплата и получение ключа - около минуты. Всё активировалось без проблем.', 'Иван Дулин', 'ПДД 2020 «Адрайв»')
+              +reviewsItem('Приобретал ключ для Адрайва. Хорошая цена. Доставка - почти сразу после оплаты, сообщением на телефон. Активировалось без проблем. Спасибо!', 'Николай', 'ПДД 2020 «Адрайв»')
+              +reviewsItem('Мне больше понравилась программа от Нового поворота. Хотя, я так думаю, примерно все они одинаковы. Только картинками отличаются... Буду учить. Вопросов при покупке не возникло. Всё продумано..', 'Анна С.', 'ПДД 2020 «Новый поворот»')
+            .swiper-pagination
 
-  //Process
-  section.process
-    .container
-      .process__inner
-        .process__content
-          h2.process__title Как это работает?
-          ul
-            +processItem('01', 'Соберите заказ', 'Выберите в каталоге одну или несколько позиций, укажите количество и конфигурацию, добавьте позицию в корзину')
-            +processItem('02', 'Оформите и оплатите заказ', 'Через корзину начните оформление заказа, правильно введите номер телефона для получения SMS c кодом активации, укажите e-mail для получения копии этого сообщения и отчёта об оплате')
-            +processItem('03', 'Получите ключ активации', 'После оплаты на указанный номер и e-mail придет ключ активации. Введите полученный ключ активации в соответствующей программе и пользуйтесь лицензированной версией!')
-        img.process__img(src="images/process/process.png", width="631", height="800", alt="")
+    //Process
+    section.process
+      .container
+        .process__inner
+          .process__content
+            h2.process__title Как это работает?
+            ul
+              +processItem('01', 'Соберите заказ', 'Выберите в каталоге одну или несколько позиций, укажите количество и конфигурацию, добавьте позицию в корзину')
+              +processItem('02', 'Оформите и оплатите заказ', 'Через корзину начните оформление заказа, правильно введите номер телефона для получения SMS c кодом активации, укажите e-mail для получения копии этого сообщения и отчёта об оплате')
+              +processItem('03', 'Получите ключ активации', 'После оплаты на указанный номер и e-mail придет ключ активации. Введите полученный ключ активации в соответствующей программе и пользуйтесь лицензированной версией!')
+          img.process__img(src="images/process/process.png", width="631", height="800", alt="")
 
-  //Contacts
-  +sectionContacts
+    //Contacts
+    +sectionContacts
