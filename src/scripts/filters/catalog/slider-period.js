@@ -26,7 +26,7 @@ function createSliderPeriod() {
     range: {
       min: [0, 0.5],
       '50%': [1, 2],
-      max: 2
+      max: [2]
     }
   });
 
@@ -34,8 +34,8 @@ function createSliderPeriod() {
     '.noUi-handle-upper > .noUi-tooltip'
   );
 
-  DOM.filtersSliderPeriod.noUiSlider.on('slide', function () {
-    if (this.get(true)[1] === this.options.range.max) {
+  DOM.filtersSliderPeriod.noUiSlider.on('update', function () {
+    if (this.get(true)[1] === this.options.range.max[0]) {
       upperTooltip.style.left = '-30px';
     } else {
       upperTooltip.style.left = '0';

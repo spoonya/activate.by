@@ -17,7 +17,7 @@ function calcActiveSliders(slider, initValue, isActive) {
   if (!isArraysEquals(slider.get(), initValue) && !isActive[0]) {
     count += 1;
     isActive[0] = true;
-  } else if (isArraysEquals(slider.get(), initValue)) {
+  } else if (isArraysEquals(slider.get(), initValue) && count > 0) {
     count -= 1;
     isActive[0] = false;
   }
