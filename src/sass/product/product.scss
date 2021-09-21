@@ -95,16 +95,16 @@
     display: flex;
     align-items: baseline;
 
-    &--short {
+    &.short {
       display: none;
     }
 
     @include media-tablet-sm {
-      &--short {
+      &.short {
         display: flex;
       }
 
-      &--short + & {
+      &.short + & {
         display: none;
       }
     }
