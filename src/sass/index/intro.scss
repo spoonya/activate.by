@@ -14,6 +14,11 @@
 
   .swiper-pagination {
     display: block;
+    bottom: 0;
+
+    @include media-tablet-lg {
+      bottom: -30px;
+    }
   }
 }
 
