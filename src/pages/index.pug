@@ -6,13 +6,21 @@ block content
   main
     //Intro
     section.intro
-      .container
-        .intro__inner
-          .intro__info
-            h1.intro__title Лицензированные ключи активации
-            p.intro__txt На сегодняшний день мы рады предложить вам более восьми тысяч лицензионных программ от ведущих зарубежных разработчиков, отечественных компаний и индивидуальных авторов
-            +linkButton('catalog.html', 'Смотреть каталог')
-          img.intro__img(src="images/intro/intro.png", width="652", height="575", alt="")
+      #swiper-intro.swiper-container
+        .swiper-wrapper
+          .intro__inner.swiper-slide
+            .intro__info.container
+              h1.intro__title Лицензированные ключи активации
+              p.intro__txt На сегодняшний день мы рады предложить вам более восьми тысяч лицензионных программ от ведущих зарубежных разработчиков, отечественных компаний и индивидуальных авторов
+              +linkButton('catalog.html', 'Смотреть каталог')
+            img.intro__img(src="images/intro/intro.png", width="652", height="575", alt="")
+          .intro__inner.swiper-slide
+            .intro__info.container
+              h1.intro__title Лицензированные ключи активации
+              p.intro__txt На сегодняшний день мы рады предложить вам более восьми тысяч лицензионных программ от ведущих зарубежных разработчиков, отечественных компаний и индивидуальных авторов
+              +linkButton('catalog.html', 'Смотреть каталог')
+            img.intro__img(src="images/intro/intro.png", width="652", height="575", alt="")
+        .swiper-pagination
 
     //Products
     section.products

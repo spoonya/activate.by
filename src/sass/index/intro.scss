@@ -1,9 +1,19 @@
 .intro {
+  position: relative;
+
   margin-bottom: 8rem;
   padding-top: 39px;
 
   @include media-tablet-lg {
     margin-bottom: 50px;
+  }
+
+  .swiper-container {
+    overflow-x: hidden;
+  }
+
+  .swiper-pagination {
+    display: block;
   }
 }
 
@@ -11,6 +21,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  background-color: $color-primary-psi;
 
   @include media-tablet-sm {
     flex-direction: column;
