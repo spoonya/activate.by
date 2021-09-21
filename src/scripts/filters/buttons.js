@@ -1,7 +1,7 @@
 import { CLASSES, DOM } from '../constants';
 
-function filterFAQ(activeFilter) {
-  DOM.details.forEach((el) => {
+function filterContent(activeFilter, items) {
+  items.forEach((el) => {
     const { filter } = el.dataset;
     const { filterTarget } = activeFilter.dataset;
 
@@ -15,7 +15,21 @@ function filterFAQ(activeFilter) {
   });
 }
 
-function selectActiveFilter() {
+function filterFAQ(activeFilter) {
+  if (!DOM.details.length) return;
+
+  filterContent(activeFilter, DOM.details);
+}
+
+function filterProductsPreview(activeFilter) {
+  const productsItems = document.querySelectorAll('.products__item');
+
+  if (!productsItems.length) return;
+
+  filterContent(activeFilter, productsItems);
+}
+
+function controlFilter() {
   if (!DOM.filter) return;
 
   let activeBtn = DOM.filter.querySelector('ul button');
@@ -31,9 +45,10 @@ function selectActiveFilter() {
 
       activeBtn = e.target;
 
-      if (DOM.details.length) filterFAQ(activeBtn);
+      filterFAQ(activeBtn);
+      // filterProductsPreview(activeBtn);
     }
   });
 }
 
-export default selectActiveFilter;
+export default controlFilter;

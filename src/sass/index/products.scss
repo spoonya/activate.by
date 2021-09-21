@@ -60,6 +60,10 @@
     }
   }
 
+  &.hidden {
+    display: none;
+  }
+
   @include media-tablet-sm {
     width: 49.3%;
 

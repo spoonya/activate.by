@@ -13,8 +13,20 @@ const DOM = {
   details: [...document.querySelectorAll('#accordion > details')],
   filter: document.querySelector('#filter'),
   filtersResetCount: document.querySelector('#filters-reset-count'),
-  filtersSlider: document.querySelector('#filters-slider'),
+  filtersSliderPeriod: document.querySelector('#filters-slider-period'),
+  filtersSliderPrice: document.querySelector('#filters-slider-price'),
   overlay: document.querySelector('#overlay')
 };
 
-export { CLASSES, DOM };
+const FILTER_SLIDERS = {
+  filtersSliderPeriod: {
+    initValue: [0, 0.5],
+    isActive: [false]
+  },
+  filtersSliderPrice: {
+    initValue: [0, 500],
+    isActive: [false]
+  }
+};
+
+export { CLASSES, DOM, FILTER_SLIDERS };

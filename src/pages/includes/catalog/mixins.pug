@@ -1,8 +1,7 @@
 mixin catalogFilters(summary, inputsArr)
-  details.catalog__filters-details
+  details(open).catalog__filters-details
     summary.catalog__filters-summary
-      +icon('catalog__filters-summary-icon', 'arrow-right')
-      span= summary
+      span.catalog__filters-title= summary
     .catalog__filters-inputs
       for input in inputsArr
         label.catalog__filters-label

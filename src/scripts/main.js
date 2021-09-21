@@ -5,8 +5,9 @@ import controlAccordion from './accordion';
 // eslint-disable-next-line no-unused-vars
 import * as sliders from './sliders';
 import {
-  selectActiveFilter,
-  createFilterSlider,
+  controlFilter,
+  createSliderPeriod,
+  createSliderPrice,
   resetFiltersOnClick,
   calcActiveFilters,
   controlFiltersBurger,
@@ -18,8 +19,9 @@ import { controlHeaderBurger } from './header';
 
 controlAccordion();
 
-selectActiveFilter();
-createFilterSlider();
+controlFilter();
+createSliderPeriod();
+createSliderPrice();
 resetFiltersOnClick();
 calcActiveFilters();
 selectCurrentCategory();

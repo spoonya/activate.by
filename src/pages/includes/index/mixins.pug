@@ -1,4 +1,4 @@
-mixin productItem(link, img, title, priceSale, priceUsual, isNew=false)
+mixin productItem(link, img, title, priceSale, priceUsual, dataAttr, isNew=false)
   - var modif
   - var markTitle
 
@@ -11,7 +11,7 @@ mixin productItem(link, img, title, priceSale, priceUsual, isNew=false)
   else
     - modif = null
 
-  article.products__item(class= modif)
+  article.products__item(class= modif data-filter= dataAttr)
     a.products__item-link(href= link aria-label= title)
     p.products__item-mark= markTitle
     img.products__item-img(src=`images/products/${img}`, width="400", height="400", alt="")

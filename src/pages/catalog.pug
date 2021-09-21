@@ -20,8 +20,12 @@ block content
                   ul.catalog__filters-links
                     +categories
               .catalog__filters-group
-                h2.catalog__filters-title Срок ключа
-                #filters-slider.catalog__filters-slider
+                .catalog__filters-item
+                  h2.catalog__filters-title Срок ключа
+                  #filters-slider-period.catalog__filters-slider
+                .catalog__filters-item
+                  h2.catalog__filters-title Цена
+                  #filters-slider-price.catalog__filters-slider
                 +catalogFilters('Производитель', [
                   {value: 'adobe', txt: 'Adobe'},
                   {value: 'microsoft', txt: 'Microsoft'}
