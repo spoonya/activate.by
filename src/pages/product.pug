@@ -54,7 +54,11 @@ block content
                 li.product__versions-item
                   input#version-3(type="radio" name="product-version" value="3")
                   label(for="version-3") 3 ПК
-              +productCounter
+              +productCounter(
+                'product-minus',
+                'product-plus',
+                'product-count'
+              )
               button.product__controls-buy-button Купить
 
     //Product key

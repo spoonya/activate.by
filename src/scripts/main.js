@@ -16,6 +16,7 @@ import {
 import { validateFormCart } from './forms';
 import controlModal from './modal';
 import { controlHeaderBurger } from './header';
+import countProductOnPage from './counter';
 
 controlAccordion();
 
@@ -31,3 +32,5 @@ validateFormCart();
 controlModal();
 controlHeaderBurger();
 controlFiltersBurger();
+
+countProductOnPage();

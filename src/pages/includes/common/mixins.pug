@@ -41,12 +41,12 @@ mixin accordion(faqArr)
           for txt in item.answer
             p= txt
 
-mixin productCounter
+mixin productCounter(idPlus=null, idMinus=null, idCount=null)
   .product-counter
     .product-counter__group
-      button.product-counter__control(aria-label="Отнять") -
-      p.product-counter__count 1
-      button.product-counter__control(aria-label="Прибавить") +
+      button.product-counter__control(id= idPlus aria-label="Отнять") -
+      p.product-counter__count(id= idCount) 1
+      button.product-counter__control(id= idMinus aria-label="Прибавить") +
     p.product-counter__price 53.55 BYN
 
 mixin crumbs(arrLinks)

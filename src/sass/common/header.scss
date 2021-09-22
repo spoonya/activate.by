@@ -211,8 +211,33 @@
 }
 
 .header__cart {
+  position: relative;
+
   &-icon {
     width: 20px;
     height: 20px;
+  }
+
+  &-count {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: -5px;
+    right: -7px;
+
+    padding: 5px;
+
+    height: 16px;
+    min-width: 16px;
+
+    background-color: $color-primary-beta;
+    color: $color-primary-psi;
+    border-radius: 50%;
+
+    font-size: 10px;
+    text-align: center;
   }
 }
