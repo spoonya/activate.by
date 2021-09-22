@@ -41,13 +41,13 @@ mixin accordion(faqArr)
           for txt in item.answer
             p= txt
 
-mixin productCounter(idPlus=null, idMinus=null, idCount=null)
+mixin productCounter(idPlus=null, idMinus=null, idCount=null, idPrice=null)
   .product-counter
     .product-counter__group
-      button.product-counter__control(id= idPlus aria-label="Отнять") -
-      p.product-counter__count(id= idCount) 1
-      button.product-counter__control(id= idMinus aria-label="Прибавить") +
-    p.product-counter__price 53.55 BYN
+      button.product-counter__control.minus(id= idPlus aria-label="Отнять") -
+      p.product-counter__count.count(id= idCount) 1
+      button.product-counter__control.plus(id= idMinus aria-label="Прибавить") +
+    p.product-counter__price(id= idPrice) 53.55 BYN
 
 mixin crumbs(arrLinks)
   .crumbs
@@ -93,7 +93,7 @@ mixin cart
           +productCounter
     .cart__total
       h3.cart__title.cart__title--marginless Итого
-      p.cart__total-sum 50 BYN
+      p#cart-price-total.cart__total-sum 50 BYN
     p.cart__descrip Вы получите ключи активации СРАЗУ после оплаты в виде сообщения на телефон и электронную почту!
     h3.cart__title Контактные данные
     form#form-cart.cart__form(name="Оплата" action="#" method="POST")

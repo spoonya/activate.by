@@ -43,11 +43,14 @@
   }
 
   &__count {
-    margin: 0 2rem;
+    text-align: center;
+    min-width: 40px;
   }
 
   &__price {
     font-size: 3rem;
+    min-width: 140px;
+    text-align: end;
 
     @include media-tablet-lg {
       font-size: 25px;

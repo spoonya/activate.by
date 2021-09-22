@@ -67,6 +67,8 @@
       }
 
       &__group {
+        margin-right: 0;
+
         @include media-tablet-sm {
           margin-right: 0;
         }
