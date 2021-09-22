@@ -78,6 +78,10 @@
         font-size: 2.2rem;
         font-weight: 500;
 
+        @include media-tablet-lg {
+          min-width: unset;
+        }
+
         @include media-tablet-sm {
           order: -1;
 
