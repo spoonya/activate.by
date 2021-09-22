@@ -25,23 +25,55 @@ block content
     //Products
     section.products
       h2.products__title.container Наша продукция
-      +filters([
-        {label: 'Антивирусы', dataAttr: "antivirus"},
-        {label: 'Офисные программы', dataAttr: "office"},
-        {label: 'ОС', dataAttr: "os"},
-        {label: 'Работа с текстом', dataAttr: "text"},
-        {label: 'Работа с файлами', dataAttr: "file"},
-        {label: 'Графика и дизайн', dataAttr: "design"},
-        {label: 'Образование и наука', dataAttr: "science"}
-      ])
+      ul#filter.filters.container(data-tabs)
+        li.filters__item
+          a.filters__button(data-tabby-default href="#all") Все
+        li.filters__item
+          a.filters__button(href="#antivirus") Антивирусы
+        li.filters__item
+          a.filters__button(href="#office") Офисные программы
+        li.filters__item
+          a.filters__button(href="#os") ОС
+        li.filters__item
+          a.filters__button(href="#text") Работа с текстом
+        li.filters__item
+          a.filters__button(href="#file") Работа с файлами
+        li.filters__item
+          a.filters__button(href="#design") Графика и дизайн
+        li.filters__item
+          a.filters__button(href="#study") Образование и наука
       .container
         .products__inner
-          .products__items
-            +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', 'antivirus', true)
-            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN', 'antivirus')
-            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN', 'science')
-            +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN', 'design')
-            +productItem('product.html', 'coreldraw/coreldraw-1.png', 'CorelDRAW Graphics', null, '482.30 BYN', 'design')
+          #all.products__items
+            +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+            +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
+            +productItem('product.html', 'coreldraw/coreldraw-1.png', 'CorelDRAW Graphics', null, '482.30 BYN')
+          #antivirus.products__items
+            +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
+          #office.products__items
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+            +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'coreldraw/coreldraw-1.png', 'CorelDRAW Graphics', null, '482.30 BYN')
+          #os.products__items
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+          #text.products__items
+            +productItem('product.html', 'photoshop/photoshop-1.png', 'Adobe Photoshop 2020 (1 месяц)', null, '24 BYN', true)
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+          #file.products__items
+            +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
+          #design.products__items
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+            +productItem('product.html', 'eset/eset-1.png', 'Eset NODE Security (1 год)', '60 BYN', '80 BYN')
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+          #study.products__items
+            +productItem('product.html', 'pdd/pdd-2.png', 'ПДД 2021 от А-Драйв', null, '13.5 BYN')
+            +productItem('product.html', 'drweb/drweb-1.png', 'Dr.Web Security Space ', null, '26.60 BYN')
           +linkButton('catalog.html', 'Смотреть больше', true)
 
     //Bonds

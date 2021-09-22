@@ -21,22 +21,19 @@ function filterFAQ(activeFilter) {
   filterContent(activeFilter, DOM.details);
 }
 
-function filterProductsPreview(activeFilter) {
-  const productsItems = document.querySelectorAll('.products__item');
-
-  if (!productsItems.length) return;
-
-  filterContent(activeFilter, productsItems);
-}
-
 function controlFilter() {
   if (!DOM.filter) return;
 
   let activeBtn = DOM.filter.querySelector('ul button');
+
+  if (!activeBtn) {
+    activeBtn = DOM.filter.querySelector('[data-tabby-default]');
+  }
+
   activeBtn.classList.add(CLASSES.active);
 
   DOM.filter.addEventListener('click', (e) => {
-    if (e.target.tagName !== 'BUTTON') return;
+    if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'A') return;
 
     if (!e.target.classList.contains(CLASSES.active)) {
       e.target.classList.add(CLASSES.active);
@@ -46,7 +43,6 @@ function controlFilter() {
       activeBtn = e.target;
 
       filterFAQ(activeBtn);
-      // filterProductsPreview(activeBtn);
     }
   });
 }

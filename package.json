@@ -62,6 +62,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.12",
+    "intersection-observer": "^0.12.0",
+    "lozad": "^1.16.0",
     "normalize.css": "^8.0.1",
     "nouislider": "^15.4.0",
     "regenerator-runtime": "^0.11.1",
