@@ -19,11 +19,11 @@ const DOM = {
 };
 
 const FILTER_SLIDERS = {
-  filtersSliderPeriod: {
+  period: {
     initValue: [0, 0.5],
     isActive: [false]
   },
-  filtersSliderPrice: {
+  price: {
     initValue: [0, 500],
     isActive: [false]
   }

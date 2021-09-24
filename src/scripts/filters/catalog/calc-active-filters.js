@@ -31,16 +31,16 @@ function calcActiveFilters() {
   DOM.filtersSliderPeriod.noUiSlider.on('change', function () {
     calcActiveSliders(
       this,
-      FILTER_SLIDERS.filtersSliderPeriod.initValue,
-      FILTER_SLIDERS.filtersSliderPeriod.isActive
+      FILTER_SLIDERS.period.initValue,
+      FILTER_SLIDERS.period.isActive
     );
   });
 
   DOM.filtersSliderPrice.noUiSlider.on('change', function () {
     calcActiveSliders(
       this,
-      FILTER_SLIDERS.filtersSliderPrice.initValue,
-      FILTER_SLIDERS.filtersSliderPrice.isActive
+      FILTER_SLIDERS.price.initValue,
+      FILTER_SLIDERS.price.isActive
     );
   });
 

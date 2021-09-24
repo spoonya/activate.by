@@ -1,6 +1,7 @@
 import noUiSlider from 'nouislider';
 
-import { DOM, FILTER_SLIDERS } from '../../constants';
+import { DOM, FILTER_SLIDERS } from '../../../constants';
+import fixTooltips from './fix-tooltips';
 
 const tooltipValues = {
   0: '1 месяц',
@@ -13,7 +14,7 @@ function createSliderPeriod() {
   if (!DOM.filtersSliderPeriod) return;
 
   noUiSlider.create(DOM.filtersSliderPeriod, {
-    start: FILTER_SLIDERS.filtersSliderPeriod.initValue,
+    start: FILTER_SLIDERS.period.initValue,
     connect: true,
     tooltips: {
       to(value) {
@@ -30,17 +31,8 @@ function createSliderPeriod() {
     }
   });
 
-  const upperTooltip = DOM.filtersSliderPeriod.querySelector(
-    '.noUi-handle-upper > .noUi-tooltip'
-  );
-
   DOM.filtersSliderPeriod.noUiSlider.on('update', function () {
-    if (this.get(true)[1] === this.options.range.max[0]) {
-      upperTooltip.style.left = '-30px';
-    } else {
-      upperTooltip.style.left = '0';
-    }
+    fixTooltips.call(this, DOM.filtersSliderPeriod, -30);
   });
 }
-
 export default createSliderPeriod;

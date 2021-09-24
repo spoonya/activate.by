@@ -11,8 +11,8 @@ function resetFiltersOnClick() {
     DOM.filtersSliderPeriod.noUiSlider.reset();
     DOM.filtersSliderPrice.noUiSlider.reset();
 
-    FILTER_SLIDERS.filtersSliderPeriod.isActive = [false];
-    FILTER_SLIDERS.filtersSliderPrice.isActive = [false];
+    FILTER_SLIDERS.period.isActive = [false];
+    FILTER_SLIDERS.price.isActive = [false];
   });
 }
 
