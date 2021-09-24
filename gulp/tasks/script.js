@@ -14,6 +14,7 @@ module.exports = function script() {
     .pipe(
       webpack({
         mode: process.env.NODE_ENV,
+        devtool: 'inline-source-map',
         output: {
           filename: '[name].min.js'
         },

@@ -1,5 +1,5 @@
 class FormValidation {
-  constructor(selector, { isModal } = { isModal: false }) {
+  constructor(selector) {
     this.form = document.querySelector(selector);
     if (!this.form) return;
 
@@ -47,8 +47,6 @@ class FormValidation {
         isRequired: true
       }
     };
-
-    this.isModal = isModal;
   }
 
   _validateEmail(email) {
@@ -225,7 +223,7 @@ class FormValidation {
     );
 
     if (res.ok) {
-      if (!this.isModal) this._clearInputs();
+      this._clearInputs();
     }
   }
 

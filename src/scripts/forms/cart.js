@@ -1,7 +1,7 @@
 import FormValidation from './form';
 
 function validateFormCart() {
-  const formValidation = new FormValidation('#form-cart', { isModal: true });
+  const formValidation = new FormValidation('#form-cart');
 
   formValidation.validateOnSubmit();
 }
