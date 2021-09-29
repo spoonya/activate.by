@@ -44,9 +44,9 @@ mixin accordion(faqArr)
 mixin productCounter(idPlus=null, idMinus=null, idCount=null, idPrice=null)
   .product-counter
     .product-counter__group
-      button.product-counter__control.minus(id= idPlus aria-label="Отнять") -
-      p.product-counter__count.count(id= idCount) 1
-      button.product-counter__control.plus(id= idMinus aria-label="Прибавить") +
+      button.product-counter__control.minus(id= idPlus type="button" aria-label="Отнять") -
+      input.product-counter__count.count(id= idCount value="1" type="text" autocomplete="off" maxlength="2")
+      button.product-counter__control.plus(id= idMinus type="button" aria-label="Прибавить") +
     p.product-counter__price(id= idPrice) 53.55 BYN
 
 mixin crumbs(arrLinks)
@@ -74,36 +74,37 @@ mixin productCard(link, img, price, title, modif=null)
 
 mixin cart
   #cart.cart.modal
-    .cart__order
-      button.cart__button-close(aria-label="Закрыть" data-modal-close)
-        +icon('cart__button-close-icon', 'close')
-      h3.cart__title Состав заказа
-      ul.cart__order-list
-        li.cart__order-item
-          .cart__order-item-info
-            a.cart__order-item-link(href="product.html" aria-label="Страница товара")
-            img.cart__order-item-img(src="images/products/kaspersky/kaspersky-1.png", width="80", height="80" alt="")
-            h4.cart__order-item-title Kaspersky Total Security (1 год)
-          +productCounter
-        li.cart__order-item
-          .cart__order-item-info
-            a.cart__order-item-link(href="product.html" aria-label="Страница товара")
-            img.cart__order-item-img(src="images/products/windows/windows7.png", width="80", height="80" alt="")
-            h4.cart__order-item-title Лицензионный ключ активации для Windows 10 Home (Домашняя)
-          +productCounter
-    .cart__total
-      h3.cart__title.cart__title--marginless Итого
-      p#cart-price-total.cart__total-sum 50 BYN
-    p.cart__descrip Вы получите ключи активации СРАЗУ после оплаты в виде сообщения на телефон и электронную почту!
-    h3.cart__title Контактные данные
-    form#form-cart.cart__form(name="Оплата" action="#" method="POST")
-      .cart__form-control
-        span.cart__form-error
-        input.cart__form-input(name="order-phone" type="tel" placeholder="Номер телефона" data-form-phone)
-      .cart__form-control
-        span.cart__form-error
-        input.cart__form-input(name="order-email" type="text" placeholder="e-mail" data-form-email)
-      button.cart__form-submit Оплатить
+    form#form-cart(name="Оплата" action="#" method="POST")
+      .cart__order
+        button.cart__button-close(type="button" aria-label="Закрыть" data-modal-close)
+          +icon('cart__button-close-icon', 'close')
+        h3.cart__title Состав заказа
+        ul#cart-order-list.cart__order-list
+          li.cart__order-item
+            .cart__order-item-info
+              a.cart__order-item-link(href="product.html" aria-label="Страница товара")
+              img.cart__order-item-img(src="images/products/kaspersky/kaspersky-1.png", width="80", height="80" alt="")
+              h4.cart__order-item-title Kaspersky Total Security (1 год)
+            +productCounter
+          li.cart__order-item
+            .cart__order-item-info
+              a.cart__order-item-link(href="product.html" aria-label="Страница товара")
+              img.cart__order-item-img(src="images/products/windows/windows7.png", width="80", height="80" alt="")
+              h4.cart__order-item-title Лицензионный ключ активации для Windows 10 Home (Домашняя)
+            +productCounter
+      .cart__total
+        h3.cart__title.cart__title--marginless Итого
+        p#cart-price-total.cart__total-sum 50 BYN
+      p.cart__descrip Вы получите ключи активации СРАЗУ после оплаты в виде сообщения на телефон и электронную почту!
+      h3.cart__title Контактные данные
+      .cart__form
+        .cart__form-control
+          span.cart__form-error
+          input.cart__form-input(name="order-phone" type="tel" placeholder="Номер телефона" data-form-phone)
+        .cart__form-control
+          span.cart__form-error
+          input.cart__form-input(name="order-email" type="text" placeholder="e-mail" data-form-email)
+        button.cart__form-submit(type="submit") Оплатить
 
 mixin categories(classItem=null, classLink=null)
   li(class= classItem): a.category-link(class= classLink href="/catalog.html") Антивирусы

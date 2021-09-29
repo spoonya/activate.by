@@ -10,6 +10,7 @@ const DOM = {
   body: document.querySelector('body'),
   burger: document.querySelector('#burger'),
   catalogFilters: document.querySelectorAll('.catalog__filters-checkbox'),
+  cart: document.querySelector('#cart'),
   details: [...document.querySelectorAll('#accordion > details')],
   filter: document.querySelector('#filter'),
   filtersResetCount: document.querySelector('#filters-reset-count'),

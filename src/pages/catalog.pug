@@ -10,7 +10,7 @@ block content
     section.catalog
       .container
         .catalog__inner
-          form#filters-catalog.catalog__filters(action="#" method="GET")
+          .catalog__filters
             .catalog__filters-wrapper
               button#filters-close.catalog__filters-close(type="button" aria-label="Закрыть")
                 +icon('catalog__filters-close-icon', 'close')
@@ -19,7 +19,7 @@ block content
                   h2.catalog__filters-title Категории
                   ul.catalog__filters-links
                     +categories
-              .catalog__filters-group
+              form#filters-catalog.catalog__filters-group(action="#" method="GET")
                 .catalog__filters-item
                   h2.catalog__filters-title Срок ключа
                   #filters-slider-period.catalog__filters-slider

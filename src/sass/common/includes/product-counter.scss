@@ -28,8 +28,6 @@
   }
 
   &__control {
-    @include hover-control-button;
-
     border: 1px solid $color-tertiary-psi;
     border-radius: 50px;
 
@@ -42,9 +40,19 @@
     }
   }
 
+  &__control:not([disabled]) {
+    @include hover-control-button;
+  }
+
+  &__control[disabled] {
+    color: $color-primary-omega;
+    border-color: $color-primary-omega;
+  }
+
   &__count {
     text-align: center;
-    min-width: 40px;
+    max-width: 40px;
+    width: 100%;
   }
 
   &__price {

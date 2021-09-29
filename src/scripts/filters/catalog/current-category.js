@@ -3,7 +3,7 @@ function selectCurrentCategory() {
     `a[href='${window.location.pathname}']`
   );
 
-  if (!activeCategory) return;
+  if (!activeCategory.length) return;
 
   activeCategory.forEach((category) => category.classList.add('current'));
 }

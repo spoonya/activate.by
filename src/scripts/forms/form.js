@@ -23,7 +23,7 @@ class FormValidation {
     };
 
     this.formElements = {
-      username: this.form.querySelector('[data-form-name]'),
+      username: this.form.querySelector('[data-form-username]'),
       userPhone: this.form.querySelector('[data-form-phone]'),
       userEmail: this.form.querySelector('[data-form-email]'),
       userMsg: this.form.querySelector('[data-form-message]'),

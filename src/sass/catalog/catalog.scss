@@ -111,7 +111,7 @@
   &-group {
     background-color: $color-primary-psi;
 
-    &:not(:last-of-type) {
+    &:not(:last-child) {
       margin-bottom: 6rem;
     }
 
@@ -120,7 +120,7 @@
         display: none;
       }
 
-      &:not(:last-of-type) {
+      &:not(:last-child) {
         margin-bottom: 25px;
       }
     }
