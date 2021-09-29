@@ -2,7 +2,7 @@ import { CLASSES, DOM } from '../../constants';
 import { isMediaBreakpoint } from '../../helpers';
 
 const filtersBurger = document.querySelector('#filters-burger');
-const filters = document.querySelector('#filters-catalog');
+const filters = document.querySelector('#filters-catalog-wrapper');
 const closeFiltersButton = document.querySelector('#filters-close');
 
 function toggleBurger() {
